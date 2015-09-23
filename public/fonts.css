@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url(fonts/ubuntu-bold-webfont.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Ubuntu-BoldItalic;
+    src: url(fonts/ubuntu-bold-italic-webfont.woff);
+}
+
+@font-face {
+    font-family: Ubuntu-Italic;
+    src: url(fonts/ubuntu-regular-italic-webfont.woff);
+}
+
+@font-face {
+    font-family: Ubuntu-Light;
+    src: url(fonts/ubuntu-light-webfont.woff);
+}
+
+@font-face {
+    font-family: Ubuntu-LightItalic;
+    src: url(fonts/ubuntu-light-italic-webfont.woff);
+}
+
+@font-face {
+    font-family: Ubuntu-Medium;
+    src: url(fonts/ubuntu-medium-webfont.woff);
+}
+
+@font-face {
+    font-family: Ubuntu-MediumItalic;
+    src: url(fonts/ubuntu-medium-italic-webfont.woff);
+}
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url(fonts/ubuntu-regular-webfont.woff);
+}

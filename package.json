@@ -1,0 +1,19 @@
+{
+  "name": "nodehacks",
+  "version": "0.0.1",
+  "description": "creating mvc applications with node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "love"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/"
+  },
+  "keywords": [
+    "node.js",
+    "express.js"
+  ],
+  "author": "ponty96",
+  "license": "MIT"
+}
