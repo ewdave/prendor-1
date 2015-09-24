@@ -1,1 +1,2 @@
-Prendor-Server //please help rewrite readme for both
+missing file confi/social-plugins.js in repo
+Should mail it to u
