@@ -43,7 +43,7 @@ app.get('/auth/facebook/callback',
 
 app.get('/auth/google',
     passport.authenticate('google',
-        {scope: 'https://www.google.com/m8/feeds'}));
+        { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
 app.get('/auth/google/callback',
     passport.authenticate('google',
