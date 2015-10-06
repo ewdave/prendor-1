@@ -68,7 +68,8 @@ export default class Header extends React.Component {
                             </li>
                             <li>
                                 <span className="header-user-details"><img className="userDp"
-                                                                           src={dpUrl}/><span>{username}</span></span>
+                                                                           src={dpUrl}/>
+                               <span className="hidden-xs">{username}</span></span>
                             </li>
                             <li className="border">
 

@@ -88,7 +88,7 @@ export default class SideBar extends Component {
 
         return(
             <div className="side-bar-component">
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-2 hidden-xs">
                     <div className="side-bar-section">
                         <div className="head">
                             Individual

@@ -95,12 +95,14 @@ a:hover {
       height: 24px;
       width: auto;
       display: inline-block;
+      float: left;
     }
 
     & span {
       margin-left: 4px;
-      margin-top:-100px;
+      margin-top:4px;
       display:inline-block;
+      float: left;
     }
   }
 

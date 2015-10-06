@@ -23,7 +23,7 @@ export default class DashBoard extends Component {
                     <div className="full">
                       <ControlPanel/>
                         
-                        <div className="col-md-10">
+                        <div className="col-md-10 col-sm-10">
                             <div className="MainMiddleMonitor">
                                 {this.props.children}
                             </div>
