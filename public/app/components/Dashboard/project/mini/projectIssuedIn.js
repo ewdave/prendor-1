@@ -4,11 +4,11 @@
 import React,{findDomNode,Component,PropTypes} from 'react';
 
 
-export default class ProjectCurrent extends Component {
+export default class ProjectIssuedIn extends Component {
 
     render(){
         return (
-            <h3>Project Current Page</h3>
+            <h3>Projects IssuedIn</h3>
         )
     }
 }

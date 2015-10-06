@@ -55,7 +55,7 @@ app.get('/auth/google/callback',
 function welcome(req, res, next) {
 
     // if user is authenticated in the session, carry on 
-    if (!req.isAuthenticated()){
+    if (req.isAuthenticated()){
         res.render('welcome.ejs')
     } else {
         return next();

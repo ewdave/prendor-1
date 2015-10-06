@@ -2,12 +2,15 @@
  * Created by ponty on 10/5/15.
  */
  import React,{findDomNode,Component,PropTypes} from 'react';
+ import {Link} from 'react-router';
 
 export default class SideBar extends Component {
 
     renderTeam = () => {
       
         const team_name = this.props.teamName;
+        const url_team_name = team_name+"_org";
+
         console.log('rendering team layout man')
 
       if(team_name.length > 0){
@@ -17,6 +20,9 @@ export default class SideBar extends Component {
               <div className="side-bar-section team">
                   <div className="head">
                       Team
+                  </div>
+                  <div className="s-l-grp">
+                      <a href="" className="link">Create Team</a>
                   </div>
                   <div className="profile">
         <span>
@@ -32,22 +38,22 @@ export default class SideBar extends Component {
                   <div className="s-l-grp">
                       <span className="title">Work</span>
                       <div className="s-l-item">
-                          <a href=""><i className="check"></i><i className="txt">Browse</i></a>
+                        <Link to={`/work/${url_team_name }/browse/`} activeClassName="active"><i className="check"></i><i className="txt">Browse</i></Link>
                       </div>
                       <div className="s-l-item">
-                          <a href="http://facebook.com"><i className="check"></i><i className="txt">AutoBid </i></a>
+                          <Link to={`/work/${url_team_name }/autobid/`} activeClassName="active"><i className="check"></i><i className="txt">AutoBid </i></Link>
                       </div>
                   </div>
                   <div className="s-l-grp">
                       <span className="title">Projects</span>
                       <div className="s-l-item">
-                          <a href="http://google.com"><i className="check"></i><i className="txt">StartNew </i></a>
+                          <Link to={`/projects/${url_team_name }/startnew/`} activeClassName="active"><i className="check"></i><i className="txt">StartNew </i></Link>
                       </div>
                       <div className="s-l-item">
-                          <a href="http://gmail.com"><i className="check"></i><i className="txt">Issued Out </i></a>
+                          <Link to={`/projects/${url_team_name }/issuedOut/`} activeClassName="active"><i className="check"></i><i className="txt">Issued Out </i></Link>
                       </div>
                       <div className="s-l-item">
-                          <a href="http://dropbox.com"><i className="check"></i><i className="txt">Issued In </i></a>
+                          <Link to={`/projects/${url_team_name }/issuedIn/`} activeClassName="active"><i className="check"></i><i className="txt">Issued In </i></Link>
                       </div>
                   </div>
                   <div className="s-l-grp">
@@ -57,9 +63,7 @@ export default class SideBar extends Component {
                       <a href="" className="link">Chat</a>
                   </div>
 
-                  <div className="s-l-grp news">
-                      <a href="" className="link">News</a>
-                  </div>
+                  
               </div>
 
           )
@@ -103,22 +107,22 @@ export default class SideBar extends Component {
                         <div className="s-l-grp">
                             <span className="title">Work</span>
                             <div className="s-l-item">
-                                <a href="#"><i className="check"></i><i className="txt">Browse</i></a>
+                                <Link to={`/work/${username}/browse/`} activeClassName="active"><i className="check"></i><i className="txt">Browse</i></Link>
                             </div>
                             <div className="s-l-item">
-                                <a href="http://facebook.com"><i className="check"></i><i className="txt">AutoBid </i></a>
+                                <Link to={`/work/${username}/autobid/`} activeClassName="active"><i className="check"></i><i className="txt">AutoBid </i></Link>
                             </div>
                         </div>
                         <div className="s-l-grp">
                             <span className="title">Projects</span>
                             <div className="s-l-item">
-                                <a href="http://google.com"><i className="check"></i><i className="txt">StartNew </i></a>
+                                <Link to={`/projects/${username}/startnew/`} activeClassName="active"><i className="check"></i><i className="txt">StartNew </i></Link>
                             </div>
                             <div className="s-l-item">
-                                <a href="http://gmail.com"><i className="check"></i><i className="txt">Issued Out </i></a>
+                                <Link to={`/projects/${username}/issuedOut/`} activeClassName="active"><i className="check"></i><i className="txt">Issued Out </i></Link>
                             </div>
                             <div className="s-l-item">
-                                <a href="http://dropbox.com"><i className="check"></i><i className="txt">Issued In </i></a>
+                                <Link to={`/projects/${username}/issuedIn/`} activeClassName="active"><i className="check"></i><i className="txt">Issued In </i></Link>
                             </div>
                         </div>
                         <div className="s-l-grp">
@@ -131,6 +135,10 @@ export default class SideBar extends Component {
                     </div>
 
                     {this.renderTeam()}
+
+                     <div className="s-l-grp news">
+                      <Link to="/" className="link" activeClassName="active">News</Link>
+                  </div>
 
                 </div>
             </div>
