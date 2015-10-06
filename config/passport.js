@@ -39,7 +39,6 @@ module.exports = function(passport) {
                     var newUser = new UserModel();
                     newUser.facebookId = profile.id;
                     newUser.facebookId = token;
-                    newUser.email = profile.email;
                     newUser.display_picture = profile.photos[0].value;
                     newUser.name = profile.displayName;
 
@@ -74,8 +73,7 @@ module.exports = function(passport) {
                     var newUser = new UserModel();
                     newUser.googleId = profile.id;
                     newUser.googleToken = token;
-                    newUser.email = profile.emails[0].value;
-                    newUser.display_picture = profile.image.url;
+                    newUser.display_picture = profile.photos[0].value;
                     newUser.name = profile.displayName;
 
                     newUser.save((err) => {

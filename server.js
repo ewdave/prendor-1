@@ -52,13 +52,44 @@ app.get('/auth/google/callback',
             failureRedirect: '/'
         }));
 
-app.get('/', (req, res) => {
-    res.render('index.ejs')
+function welcome(req, res, next) {
+
+    // if user is authenticated in the session, carry on 
+    if (!req.isAuthenticated()){
+        res.render('welcome.ejs')
+    } else {
+        return next();
+    }
+    
+}
+
+function returnHome(req,res,next){
+ if (req.isAuthenticated()){
+        res.redirect('/')
+    } else {
+        return next();
+    }
+}
+
+app.get('/', welcome,(req, res) => {
+    res.render('index.ejs');
 });
+
+
+app.get('/login',returnHome,(req,res) => {
+    res.render('login.ejs')
+});
+
+app.get('/register',returnHome,(req,res) => {
+    res.render('register.ejs')
+});
+
+
 
 app.get('/profile/:id', (req, res) => {
     res.render('profile.ejs')
 });
+
 
 
 app.get('/api/getauth', function (req, res) {
@@ -75,7 +106,7 @@ app.get('/profile', (req, res)=> {
 })
 
 
-var server = app.listen(3000, function () {
+var server = app.listen(5000, function () {
 
     var host = server.address().address;
     var port = server.address().port;
@@ -85,4 +116,4 @@ var server = app.listen(3000, function () {
 });
 
 
-mongoose.connect('mongodb://localhost/Prendor');
+//mongoose.connect('mongodb://localhost/Prendor');

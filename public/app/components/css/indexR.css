@@ -1,0 +1,559 @@
+
+
+.form {
+    position: relative;
+    font-family: Ubuntu-Bold;
+    color:#666;
+    background: rgba(255, 255, 255, 0.27);
+    padding: 10px 5px;
+    float: right;
+    width: auto;
+    margin: 3px 5px;
+    height: 48px;
+}
+
+
+.form:hover {
+
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+
+.text {
+    font-family: Ubuntu-Bold;
+    background: transparent;
+    border-left: 1px solid #666;
+    border-top: none;
+    margin-bottom: 4px;
+    border-right: none;
+    padding-left: 6px;
+    border-bottom: none;
+    height: 25px;
+    margin-top: 3px;
+    font-size: 14px;
+
+
+}
+
+.text:focus {
+    outline: none;
+
+}
+
+.form i {
+    padding: 5px 6px;
+    font-size: 13px;
+}
+
+.form .fa  {
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+
+.push-down-s1 {
+    margin-bottom: 5px;
+}
+
+.text-separator {
+    margin: 3px 0;
+    width: 90%;
+    border-top-color: #666;
+    border-bottom: none;
+}
+
+.form-Bottom {
+    position: absolute;
+    bottom: 4px;
+    color: #eca806;
+    display: inline-block;
+    font-family: Ubuntu-Bold;
+    font-size: 14px;
+    width: 90%;
+    padding: 3px 6px 3px 0;
+
+}
+
+.submit-btn {
+    display: inline;
+    width: 100%;
+}
+
+.sendBtn {
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    color: #eca806;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.submit-btn .sendBtn:focus {
+    outline: none;
+}
+
+.submit-btn .fa {
+    color: #000;
+}
+
+
+
+
+
+/*Responsive media query for screen sizes below 768px*/
+
+@media screen and (max-width: 768px) {
+
+    .indexBackground {
+
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        width: auto;
+        height: 100%;
+        margin: 0 0;
+
+    }
+
+    .indexBackground img {
+        width: auto;
+        height: 100%;
+    }
+
+    .indexHeader {
+        margin: 25px 0 20px 15px;
+        width: 200px;
+    }
+    .indexHeader img{
+        height: 53px;
+        width: auto;
+    }
+
+    .indexRight {
+        float: right;
+        margin:-10px 0 0 0;
+        width: 100%;
+    }
+
+    .slider {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.65);
+        height: auto;
+        padding: 10px 2px;
+    }
+
+    .sliderComponent > .right{
+        font-family: Ubuntu-Bold;
+        float: left;
+        margin: 0 15px 0 0;
+        opacity: 1;
+
+    }
+
+    .sliderComponent > .right > .top {
+        text-align: right;
+        font-size: 24px;
+        color: #eca806;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.60);
+        margin: 5px 0 10px 0;
+    }
+    .sliderComponent > .right > .top div {
+        padding: 3px 5px;
+    }
+
+    .sliderComponent > .right > .bottom {
+        font-family: Ubuntu-Medium;
+        font-size: 13px;
+        padding: 5px 8px;
+        text-align: left;
+        word-wrap: break-word;
+        width: 100%;
+        height: auto;
+    }
+    .sliderComponent > .left{
+        float: left;
+        margin-right: 40px;
+        opacity: 1;
+    }
+
+    .sliderComponent > .left > .imgLeft {
+        margin: 4px 4px;
+
+    }
+
+    .sliderComponent > .left > .imgLeft img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .slider > .controls {
+        font-family: Ubuntu-Bold;
+        color: #1690a2;
+        float: right;
+        margin: 0 10px 0 0;
+    }
+
+    .arrowLeft {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,#ffffff 10%,rgba(0, 0, 0, 0.3));
+        padding: 4px 4px 4px 3px;
+        border-radius: 2px;
+        border: none;
+        color: #1690a2;
+    }
+
+    .arrowLeft:focus {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.3),#ffffff 90%);
+        color: #1690a2;
+        outline: none;
+    }
+
+
+    .arrowRight {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.3),#ffffff 90%);
+        padding: 4px 4px 4px 3px;
+        border-radius: 2px;
+        border: none;
+        color: #1690a2;
+    }
+
+    .arrowRight:focus {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,#ffffff 10%,rgba(0, 0, 0, 0.3));
+        color: #1690a2;
+        outline: none;
+    }
+
+
+    .BlockSep {
+        display: block;
+    }
+
+
+
+}
+
+
+/*Responsive media query for screen sizes above768px*/
+
+@media screen and (min-width: 768px) {
+
+    .indexBackground {
+
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+
+    }
+
+    .indexBackground img {
+        width: auto;
+        height: 100%;
+    }
+
+    .indexHeader {
+        margin: 25px 0 0 15px;
+        width: 200px;
+    }
+    .indexHeader img{
+        height: 53px;
+        width: auto;
+    }
+
+    .indexRight {
+        float: right;
+        margin:-30px 0 0 0;
+        padding: 15px 5px;
+    }
+
+    .slider {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.27);
+        height: auto;
+        padding: 10px 2px;
+        width: 100%;
+        margin: 0;
+    }
+    .sliderComponent {
+        display: inline-block;
+        width: 100%;
+    }
+    .sliderComponent > .right{
+        font-family: Ubuntu-Bold;
+        float: right;
+        margin: 0 15px 0 0;
+        opacity: 1;
+        width: 75%;
+        padding: 0 2px;
+
+
+    }
+
+    .sliderComponent > .right > .top {
+        text-align: right;
+        font-size: 24px;
+        color: #eca806;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.60);
+        margin: 5px 0 10px 0;
+    }
+    .sliderComponent > .right > .top div {
+        padding: 3px 5px;
+    }
+
+    .sliderComponent > .right > .bottom {
+        font-family: Ubuntu-Medium;
+        font-size: 13px;
+        padding: 5px 8px;
+        text-align: end;
+        word-wrap: break-word;
+        width: 450px;
+        height: 200px;
+        float: right;
+    }
+    .sliderComponent > .left{
+        float: left;
+        opacity: 1;
+        width: 20%;
+
+    }
+
+    .sliderComponent > .left > .imgLeft {
+        margin: 4px 4px;
+
+    }
+
+    .sliderComponent > .left > .imgLeft img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .sliderComponent > .left > .imageFloatLeft {
+        float: right;
+        display: inline;
+    }
+    .controls {
+        display: block;
+        font-family: Ubuntu-Bold;
+        color: #1690a2;
+        float: right;
+        margin: 0 10px 0 0;
+    }
+
+    .arrowLeft {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.25));
+        background: -moz-linear-gradient(180deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.25));
+        padding: 4px 6px 4px 6px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: none;
+        color: #1690a2;
+        box-shadow: inset 1px 1px 1px 0 #ffffff,
+        inset 0 -1px 1px 0 #ffffff;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    .arrowLeft:focus {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,rgba(0, 0, 0, 0.3),#ffffff 90%);
+        background: -moz-linear-gradient(180deg,rgba(0, 0, 0, 0.3),#ffffff 90%);
+        color: #1690a2;
+        outline: none;
+        box-shadow: inset 1px 1px 1px 0 #ffffff,
+        inset 0 -1px 1px 0 #ffffff;
+    }
+
+
+    .arrowRight {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.26), rgba(255, 255, 255, 0.25));
+        background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.26), rgba(255, 255, 255, 0.25));
+        padding: 4px 6px 4px 6px;
+        border-radius: 2px;
+        border: none;
+        color: #1690a2;
+        box-shadow: inset -1px 1px 1px 0 #ffffff,
+        inset 0 -1px 1px 0 #ffffff;
+        cursor: pointer;
+    }
+
+    .arrowRight:focus {
+        font-family: Ubuntu-Bold;
+        background: -webkit-linear-gradient(180deg,#ffffff 10%,rgba(0, 0, 0, 0.3));
+        background: -moz-linear-gradient(180deg,#ffffff 10%,rgba(0, 0, 0, 0.3));
+        color: #1690a2;
+        outline: none;
+        box-shadow: inset 1px 1px 1px 0 #ffffff,
+        inset 0 -1px 1px 0 #ffffff;
+    }
+
+
+    .BlockSep {
+        display: block;
+    }
+    .indexForm {
+        display: inline-block;
+        margin: 10px 0 0 0;
+        float: right;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+.formSelector {
+    font-family: Ubuntu-Medium;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin: 10px 0 0 0;
+    width: 100%;
+    padding: 6px 0 3px 0;
+}
+
+
+.formSelector > .otrs {
+    font-family: Ubuntu-Bold;
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 8px;
+    margin: 0 6px;
+    border-radius: 2px;
+    float: right;
+
+
+}
+
+.otrs.blue {
+    background: #1690a2;
+    border:1px solid #1690a2;
+    font-size: 12px;
+}
+
+.otrs.orange {
+    font-size: 12px;
+    background: #eca806;
+    border:1px solid #eca806;
+}
+
+.social {
+    height: 36px;
+    margin: 2px 3px 0 3px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.social img {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+
+
+}
+
+.social:focus {
+    outline: none;
+}
+.formSelector button {
+    padding: 0 0;
+}
+
+
+
+
+
+.Form {
+    position: relative;
+    border: 1px solid transparent;
+    padding: 6px 10px;
+    font-family: Ubuntu-Bold;
+
+}
+
+.Form small {
+    font-family: Ubuntu-LightItalic;
+    font-size: 14px;
+}
+
+
+
+.infoFin {
+    margin: 0 0 0 60px;
+}
+
+
+
+.FormBlock {
+    margin:10px 0 0;
+    display: block;
+    width: 100%;
+}
+
+.FormBottom {
+    margin: 35px 0 0 10px;
+    font-family: Ubuntu-Bold;
+    font-size: 14px;
+}
+
+
+.input-text {
+    font-family: Ubuntu-Bold;
+    background: transparent;
+    border-bottom: 1px solid #666;
+    border-left:none;
+    border-top: none;
+    margin-bottom: 4px;
+    border-right: none;
+    height: 25px;
+    margin-top: 3px;
+    font-size: 14px;
+    width: 100%;
+    color: #666;
+
+
+}
+
+.input-text:focus {
+    outline: none;
+
+}
+
+
+.imageUploadInputCircle > .image {
+    margin: 30px 0 0 0;
+}
+
+.listText {
+    display: inline-block;
+    padding: 1px 1px;
+    height: auto;
+    width: auto;
+}
+
+.Btn-Grp {
+
+    display: inline-block;
+    position: absolute;
+    bottom: 18px;
+    margin-left: 15px;
+}

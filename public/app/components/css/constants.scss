@@ -1,0 +1,102 @@
+@import "./normalize";
+
+$our_blue: #1690a2;
+$idx-whitish: #e6e6e6;
+$bbb:#bbb;
+$orange:#eca806;
+$our_black : #666;
+$body-bag: #f7f7f7;
+$b-btm-color: #4a4a4a;
+
+
+
+@mixin float($pos){
+  float: $pos;
+  display: inline-block;
+}
+
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition:$transition;
+}
+
+@mixin border-radius($size){
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;
+}
+
+@mixin bg-size($size){
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+@mixin all-Borders($val){
+  border: $val;
+}
+
+@mixin l-gradient($val1...){
+  
+  background: -moz-linear-gradient($val1);
+  background: -webkit-linear-gradient($val1);
+  background: -o-linear-gradient($val1);
+  background: linear-gradient($val1);
+}
+
+
+
+@mixin placeholder($fontSize,$fontFamily,$color){
+  input:-moz-placeholder {
+    color:$color;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    padding: 0 0 2px 0;
+  }
+  input:-ms-input-placeholder {
+    color:$color;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    padding: 0 0 2px 0;
+  }
+
+  input::-webkit-input-placeholder{
+    color:$color;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    padding: 0 0 2px 0;
+  }
+}
+
+body {
+  font-family: Ubuntu-Regular;
+  font-size: 11px;
+  background: $body-bag;
+  color: $our_black;
+
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding: 0 0;
+  }
+}
+
+.my_alert {
+  background: #ffffff;
+  color: #B00100;
+  font-style: normal;
+  font-size: 11px;
+  padding: 0;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+
+
+
+

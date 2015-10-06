@@ -1,0 +1,275 @@
+@import "./constants";
+.index-first-banner {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow-x:hidden;
+}
+.logo-color {
+  color:$orange;
+}
+
+.redBorder {
+  border:1px solid #f40100;
+}
+
+.blueBorder {
+  border:1px solid $our_blue;
+}
+.index-first-banner img.idx-1st-img {
+  height:100%;
+  width:auto;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+  .index-first-banner img.idx-1st-img {
+    width: auto;
+    height: 100vh;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+.index-top {
+  background: rgba(42, 42, 42, 0.8);
+  padding: 9px 3px 2px 3px;
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.logo-icon {
+  height: 50px;
+  width: auto;
+}
+.idx-left {
+  @include float(left)
+}
+.idx-right {
+  @include float(right)
+}
+
+.idx-nav {
+  list-style: none;
+  display: inline-block;
+
+  .idx-nav-item {
+    @include float(left);
+    color:$bbb;
+    font-family: Ubuntu-Bold;
+    font-size: 16px;
+    margin: 1rem 20px;
+    position: relative;
+
+
+
+    .txt {
+      cursor: pointer;
+      display: inline-block;
+      padding: 1px 1px;
+      color: $bbb;
+    }
+
+
+   .txt:active ~ .bottom {
+      height: 5px;
+      background: $bbb;
+      @include border-radius(2px)
+    }
+    .txt:hover ~ .bottom {
+      height: 5px;
+      background: $bbb;
+      @include border-radius(2px)
+    }
+
+    .bottom {
+      display:inline-block;
+      width: 100%;
+      -webkit-transition: all ease-in 0.45s;
+      -moz-transition: all ease-in 0.45s;
+      -ms-transition: all ease-in 0.45s;
+      -o-transition: all ease-in 0.45s;
+      transition: all ease-in 0.45s;
+    }
+
+
+
+  }
+}
+
+.showBox {
+  display: block;
+  position: absolute;
+  top:20px;
+  height: auto;
+  width: 270px;
+  right: 22px;
+  font-family: Ubuntu-Bold;
+  font-size: 17px;
+
+  .error-msg-box {
+    background: #ff0008;
+    font-family: Ubuntu-Bold;
+    padding: 9px 6px;
+    text-align: center;
+    font-size: 13px;
+    color:$idx-whitish;
+    width: 100%;
+    display: block;
+  }
+
+  .error-msg-box ul {
+    list-style: n;
+  }
+
+  .form-box {
+    width: 100%;
+    height: auto;
+    background: rgba(42, 42, 42, 0.65);
+    font-size: 13px;
+    padding: 25px 6px 0 6px;
+    display: inline-block;
+
+    .box-item {
+      border-bottom: 1px solid $idx-whitish;
+      padding-bottom: 2px;
+      display: block;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+
+      @include placeholder(16px,Ubuntu-Regular,$idx-whitish);
+
+
+
+      & span {
+        display: inline-block;
+        margin: 5px 5px;
+      }
+
+      & i {
+        border-right: 1px solid $idx-whitish;
+        width: 10%;
+        float: left;
+        padding: 6px 2px;
+        color:$idx-whitish;
+      }
+
+      & input {
+        float: left;
+        width: 80%;
+        background: transparent;
+        display: inline;
+        margin: 3px 2px 2px 2px;
+        padding: 2px 0 2px 5px;
+        color: $idx-whitish;
+        font-family: Ubuntu-Regular;
+        font-size: 14px;
+        @include all-Borders(none);
+      }
+
+
+
+      & input:focus {
+        outline:none;
+      }
+    }
+
+    .idx-action-btn {
+      display: block;
+      margin: 200px 15px 15px 0;
+      border-top: 1px solid $idx-whitish;
+      float: right;
+      height: auto;
+      padding: 10px 0 0 8px;
+      font-size: 26px;
+      font-family: Ubuntu-Regular;
+      cursor:pointer;
+      & button , input[type="submit"]{
+        display: inline-block;
+        float: left;
+        @include all-Borders(none);
+        color:$idx-whitish;
+        background: none;
+      }
+
+      input[type="submit"]:hover {
+        color: #fff;
+      }
+
+      input[type="submit"]:hover ~ i{
+        color: #fff;
+
+        border:2px solid #fff;
+      }
+
+
+      button:focus,input[type="submit"]:hover{
+        outline: none;
+      }
+      & i {
+        float: left;
+        border:2px solid $idx-whitish;
+        border-radius: 50%;
+        text-align: center;
+        background: transparent;
+        padding: 4px 13px;
+        color: #000000;
+        margin: 0 4px;
+        @include transition(all ease-in 0.4s);
+
+        .fa {
+          font-size: 22px;
+        }
+      }
+
+    }
+
+
+  }
+
+  .social-section {
+    display: inline-block;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.10);
+    height: auto;
+    font-family: Ubuntu-Regular;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 3px 6px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.13);
+    }
+
+    &:focus {
+      background: transparent;
+    }
+
+    & div {
+      display: inline-block;
+      margin-bottom: 5px;
+      float: right;
+      color: #000;
+      padding: 3px 6px;
+    }
+
+    & .link {
+      color: $our_blue;
+      text-align: end;
+    }
+
+
+
+  }
+
+
+}
+
+

@@ -1,0 +1,184 @@
+.DashBoardItem {
+    margin: 0 0 5px 10px;
+    background-color: #f7f7f7;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.DashBoardItemHeader {
+    display: block;
+}
+.DashBoardItemHeaderList {
+    color:#1690a2;
+    font-size: 11px;
+    font-family: Ubuntu-Bold;
+    font-weight: bold;
+    padding: 0 0 0 5%;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+
+}
+
+.DashBoardItemHeaderList  .ProfileIcon img{
+
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    height: 25px;
+    width: auto;
+    display: inline-block;
+
+}
+
+
+.DashBoardItemHeaderList > li {
+    float: left;
+}
+
+.DashBoardItemHeaderList  > li  > img {
+    padding: 1px 0;
+    margin: 0;
+    height: 20px;
+    width: auto;
+}
+.DashBoardItemHeaderList  .DashBoardItemTitle {
+    padding: 4px 0 0 4px;
+
+}
+
+
+.DashBoardBody {
+    width: 90%;
+    display: inline-block;
+    padding: 0 0;
+
+}
+
+.alert {
+    background: #de0000;
+    color:#FFFFFF;
+    padding: 4px 4px 4px 2px;
+    font-size: 10px;
+    border: none;
+    font-family: Ubuntu-Regular;
+    font-style: normal;
+}
+
+
+
+
+.DashBoardBody  > .DashBoardBodyFull {
+    width:90%;
+    float: left;
+    font-family: Ubuntu-Bold;
+    color: #666666;
+    font-size: 10px;
+    text-align: left;
+    padding: 2px 0 6px 38px;
+    cursor: pointer;
+    word-wrap: break-word;
+
+}
+
+
+
+.DashBoardBody  > .DashBoardBodyFull:hover {
+    font-size: 11px;
+    font-family: Ubuntu-Bold;
+}
+
+.DashBoardBody > .DashBoardBodyFull a.active {
+    font-size: 12px;
+    font-family: Ubuntu-Bold;
+}
+
+
+
+.DashBoardBody  > .block {
+    display: block;
+
+    padding: 3px 0 0 15%;
+
+}
+.DashBoardBody  .checkListItem {
+    list-style: none;
+    display: inline;
+}
+
+
+
+.checkListItem li {
+    float: left;
+    font-size: 10px;
+    padding: 0 0 0 3px;
+    color:#1690a2;
+    font-family: Ubuntu-Regular;
+    font-weight: bold;
+}
+
+.DashBoardSetSeparator {
+
+    border-left:1px solid #FFFFFF;
+    border-top:1px solid #FFFFFF;
+    border-bottom: none;
+    box-shadow: 0 1px 0 1px #dddddd;
+    width: 63%;
+    margin: 3px 0 0 15%;
+
+}
+
+.control-drop-down {
+    padding: 2px 1px;
+    display: block;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.control-drop-down .c-body.hide {
+    display: none;
+}
+
+.control-drop-down .c-body.show {
+    display: block;
+}
+
+.control-drop-down  >  .title {
+    display: inline-block;
+    height: auto;
+    padding: 1px 1px;
+    width: 98%;
+}
+
+.control-drop-down > .title > span{
+    font-family: Ubuntu-Bold;
+    font-size: 12px;
+    display: inline-block;
+    color: #666666;
+    float: left;
+    padding: 5px 2px 0 2px;
+}
+
+.control-drop-down >  .title > .fa {
+    font-size: 12px;
+    display: inline-block;
+    color: #666666;
+    float: right;
+    padding: 8px 0 0 2px;
+    cursor: pointer;
+
+}
+
+.control-drop-down .ProfileIcon img{
+
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    height: 25px;
+    width: auto;
+    display: inline-block;
+    float: left;
+    margin-top: -5px;
+
+}
+

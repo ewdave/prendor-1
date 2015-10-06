@@ -1,0 +1,117 @@
+@import "./../../css/constants.scss";
+.ProjectItem {
+    background: linear-gradient(125deg,rgba(23,22,22,0.03) 40%,#ffffff);
+    border:1px solid #fafafa;
+    box-shadow: inset 1px 1px 1px #f2f2f2,
+    inset -1px -1px 1px #f2f2f2;
+    padding: 2px 2px;
+    margin: 1px 2px 1px 2px;
+    font-family: Ubuntu-Regular;
+    font-size: 12px;
+    display: inline-block;
+    width: 97%;
+    cursor: pointer;
+    transition: all ease-out 1s;
+}
+
+.ProjectItem:hover {
+    background: linear-gradient(125deg,#ffffff 40%,rgba(23,22,22,0.03));
+
+}
+
+.ProjectItem.active {
+    border-left: 7px solid #1690a2;
+    width: 96%;
+    margin: 1px 2px 1px 0;
+}
+
+.ProjectItem .Proj-i-row {
+    margin:4px 2px;
+}
+
+.ProjectItem .Proj-i-row .title {
+    padding: 2px 2px;
+    font-family: Ubuntu-Bold;
+    color:$our_blue;
+}
+
+.ProjectItem .Proj-i-row .body {
+    padding: 2px 2px;
+    color:$our_black;
+}
+
+.ProjectItem .Proj-i-row .body.skill {
+    word-wrap: break-word;
+    width: 88%;
+    color:$our_black;
+}
+
+
+
+.postedBy {
+    float: right;
+    margin-bottom: 10px;
+    padding: 10px 3px 3px 3px;
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.postedBy .blue {
+    font-family: Ubuntu-MediumItalic;
+    cursor: context-menu;
+}
+
+
+
+.postedBy  .UserBox{
+    position: absolute;
+    top: -110px;
+    left: -80px;
+    background: #f7f7f7;
+    border-radius: 6px;
+    display: none;
+    padding: 1px 1px;
+    width: 140px;
+    height: auto;
+    font-size: 13px;
+}
+
+.postedByHover {
+    display: inline-block;
+    padding: 2px 2px;
+}
+.postedByHover:hover ~ .UserBox {
+    display: block;
+}
+
+
+
+.project-enter {
+    opacity: 0.01;
+}
+
+.project-enter.project-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+
+.project-appear {
+    opacity: 0.01;
+}
+
+.project-appear.project-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+
+.project-leave {
+    opacity: 0.01;
+}
+
+.project-leave.project-leave-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}

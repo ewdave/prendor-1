@@ -1,0 +1,535 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+a:visited,a:link,a:focus,a:active {
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    padding: 0 0;
+    margin: 0 0;
+}
+.blue {
+    color: #1690a2;
+}
+
+.green {
+    color: green;
+}
+.normal {
+    color:#666;
+}
+.red {
+    color: #ff0000;
+}
+
+input:-moz-placeholder {
+    color:#666;
+    font-family: Ubuntu-Medium;
+}
+
+input::-webkit-input-placeholder{
+    color:#666;
+    font-family: Ubuntu-Medium;
+}
+
+input:-ms-input-placeholder {
+    color:#666;
+    font-family: Ubuntu-Medium;
+}
+
+input:focus {
+    outline: none;
+}
+.full {
+    width: 100%;
+    display: inline-block;
+}
+
+
+.col-12 {
+    width: 100%;
+    float: left;
+}
+.col-11 {
+    width: 91.66666667%;
+    float: left;
+}
+.col-10 {
+    width: 83.33333333%;
+    float: left;
+}
+.col-9 {
+    width: 75%;
+    float: left;
+}
+.col-8 {
+    width: 66.66666667%;
+    float: left;
+}
+.col-7 {
+    width: 58.33333333%;
+    float: left;
+}
+.col-6 {
+    width: 50%;
+    float: left;
+}
+.col-5 {
+    width: 41.66666667%;
+    float: left;
+}
+.col-4 {
+    width: 33.33333333%;
+    float: left;
+}
+.col-3 {
+    width: 25%;
+    float: left;
+}
+.col-2 {
+    width: 16.66666667%;
+    float: left;
+}
+.col-1 {
+    width: 8.33333333%;
+    float: left;
+}
+
+
+.FormAddon {
+    display: inline-block;
+    font-family: Ubuntu-Bold;
+    font-size: 14px;
+}
+
+.FormAddon .text {
+    margin:0 0 0 0;
+}
+.FormAddon input[type="text"] {
+    border: 1px solid #c2c2c2;
+    border-radius: 15px;
+    padding: 5px 8px 5px 5px;
+    font-size: 12px;
+    height: 10px;
+    color: #666666;
+    font-family: Ubuntu-Medium;
+    background-color: #fff;
+}
+
+.FormAddon input[type="text"]:focus {
+    outline: none;
+}
+
+.FormAddon button {
+    border: 1px solid #1690a2;
+    color: #666666;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-left: -7px;
+    padding: 3px 4px 4px 4px;
+}
+
+
+.Button {
+
+    font-family: Ubuntu-Bold;
+
+    border: none;
+    border-radius: 49%;
+    color: #666;
+    box-shadow: inset 0 -1px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
+    cursor:pointer;
+    padding: 11px 11px;
+}
+
+.Button:focus {
+
+    box-shadow: 0 -1px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(255,255,255,0.25),rgba(0, 0, 0, 0.14));
+    background: -moz-linear-gradient(90deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.14));
+    outline: none;
+}
+
+.fBtn {
+    font-family: Ubuntu-Bold;
+    border: none;
+    border-radius: 50%;
+    color: #666;
+    box-shadow: inset 0 -1px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
+    cursor:pointer;
+    padding: 8px 11px;
+}
+
+.fBtn:focus {
+
+    box-shadow: 0 -1px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(255,255,255,0.25),rgba(0, 0, 0, 0.14));
+    background: -moz-linear-gradient(90deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.14));
+    outline: none;
+}
+
+
+.fBtn .fa {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+
+.CheckBox {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    content: "";
+    background-color: #1690a2;
+    border: 1px solid #1690a2;
+    margin-left: 3px;
+}
+.UnCheckBox {
+
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    content: "";
+    border: 1px solid #5e5e5e;
+    background-color: #e5e5e5;
+    margin-left: 3px;
+}
+
+
+.circleBrown {
+   background-color: #eca806;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 6px 0 0 0;
+}
+
+.circleBlue {
+    background-color: #1690a2;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 6px 0 0 0;
+}
+
+
+
+
+
+
+
+.TextArea {
+
+    border: none;
+    font-family: Ubuntu-Bold;
+    font-size: 13px;
+    margin-top: 10px;
+    resize: none;
+    outline: none;
+    overflow: auto;
+    word-wrap: break-word;
+    width: 100%;
+    height: 150px;
+    padding: 5px 0 0 1px;
+    color: #666;
+}
+
+.TextArea:focus {
+
+    border: none;
+    outline: none;
+    overflow: auto;
+    resize: none;
+    word-wrap: break-word;
+    padding: 5px 0 0 1px;
+    color: #666;
+}
+
+.MultipleSelect {
+    background-color: transparent;
+    position: relative;
+    z-index: 8;
+    font-family: Ubuntu-Regular;
+}
+
+.SelectedList {
+}
+.SearchList {
+    background-color: #f7f7f7;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2px 2px 6px 2px;
+    position: absolute;
+    margin-top: 6px;
+    box-shadow: 3px 12px 15px 0 rgba(0, 0, 0, 0.29),
+    -3px 0 15px 0 rgba(0, 0, 0, 0.29);
+    display: none;
+    width: 100%;
+
+}
+
+.SearchList.active {
+    display: block;
+}
+
+.SearchList .listItem {
+    padding: 1px 1px;
+    display: block;
+}
+
+.SearchDropDownElement {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    padding: 1px 1px;
+    margin: 0 20px;
+}
+
+.SearchDropDownElement > .logo {
+    float: left;
+    margin: 0 15px 0 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    padding: 2px;
+}
+
+.SearchDropDownElement > .logo > img {
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+
+.SearchDropDownElement > .text {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-family: Ubuntu-Regular;
+    font-size: 12px;
+    color: #666;
+    float: left;
+
+}
+
+.SelectedList .Selected {
+    display: inline-block;
+    margin: 3px 2px;
+}
+
+.SelectedList .Selected  .SelectedText {
+    border: 1px solid #c2c2c2;
+    border-radius: 15px;
+    padding: 1px 8px 6px 5px;
+    font-size: 12px;
+    height: 10px;
+    color: #666666;
+    font-family: Ubuntu-Regular;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
+.SelectedList .Selected  .SelectedText:focus {
+    outline: none;
+}
+
+.SelectedList .Selected   button {
+    border: 1px solid #c2c2c2;
+    color: #666666;
+    display: inline-block;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-left: -7px;
+    margin-top: 3px;
+    padding: 3px 4px 3px 4px;
+    background-color: #ebebeb;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+.SelectedList .inputForm {
+    height: 22px;
+    margin: 3px 3px;
+}
+
+.SelectedList .inputForm input[type="text"] {
+    border: none;
+    height: 22px;
+    color: #666666;
+    background-color: transparent;
+    font-family: Ubuntu-Medium;
+    width: 260px;
+}
+
+
+.CategorySearch {
+    margin: 10px 11px;
+    width: 95%;
+    display: inline-block;
+}
+
+.categoryItem {
+    font-family: Ubuntu-Regular;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 6px;
+}
+
+.categoryItem:hover {
+    font-size: 13px;
+    font-family: Ubuntu-Bold;
+}
+
+
+
+
+.SearchPlatform {
+    width: 100%;
+    height: 100%;
+}
+.caret-lower {
+    -webkit-transform: rotate(310deg);
+    -moz-transform: rotate(310deg);
+    -ms-transform: rotate(310deg);
+    -o-transform: rotate(310deg);
+    transform: rotate(310deg);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin-left: 2px;
+    color: #1690a2;
+}
+
+
+.attach-item{
+    display: inline-block;
+    margin: 6px;
+}
+.fileBox{
+    float: left;
+    display: inline-block;
+    background-color: #ebebeb;
+    font-family: Ubuntu-Bold;
+    font-size: 36px;
+    color: #1690a2;
+    padding: 0 0;
+    cursor: pointer;
+
+}
+.fileBox span {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding:0 10px;
+
+}
+
+.action{
+    float: left;
+    padding: 2px 3px;
+    position: relative;
+}
+
+.action > .delete {
+    position: relative;
+    padding: 1px 1px;
+    display: inline-block;
+}
+.action > .delete > .btn {
+    font-family: Ubuntu-Bold;
+    font-size: 20px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 50%;
+    color: #1690a2;
+    box-shadow: inset 0 -1px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
+    transition: all linear 0.1s;
+    cursor:pointer;
+    margin: 0 5px;
+}
+
+.action > .delete > .btn:focus {
+
+    box-shadow: 0 -1px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(255,255,255,0.25),rgba(0, 0, 0, 0.14));
+    background: -moz-linear-gradient(90deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.14));
+    outline: none;
+}
+
+.action > .delete > .tooltip {
+    background-color: #666666;
+    border-radius: 6px;
+    color: #fff;
+    padding: 2px;
+    display: none;
+
+}
+
+.btn:hover ~ .tooltip {
+    display: inline-block;
+    position: absolute;
+    top: -15px;
+    right: -20px;
+}
+
+.progress-bar {
+    display: block;
+    height: 10px;
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.progress-bar > .progress-static {
+    height: 2px;
+    width: 100%;
+    background-color: #ebebeb;
+}
+
+
+.progress-bar > .progress {
+    position: absolute;
+    top: 0;
+    width: 4px;
+    height: 2px;
+    background-color: #1690a2;
+    transition: width ease-out 1s;
+
+}
+
+.progress-bar > .progress:hover {
+    width: 100%;
+}

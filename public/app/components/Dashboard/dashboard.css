@@ -1,0 +1,281 @@
+
+* {
+    margin: 0 0;
+
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    font-style: normal;
+}
+
+
+.MainBodySection {
+    width: 99.77%;
+    display: inline-block;
+
+}
+
+.MainLeftSideDashBoard {
+    padding: 28px 0 0 0;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.MainMiddleMonitor {
+    height: 655px;
+    width: 100%;
+    background-color: transparent;
+
+}
+
+.WorkDisplay {
+    margin: 0 0;
+    height: 86%;
+    overflow-y: scroll;
+    padding: 0 0 3px 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+.StartNewSection {
+    padding: 10px 0 0 0;
+    height: 98%;
+    font-family: Ubuntu-Bold;
+    font-size: 13px;
+    max-width: 100%;
+    display: block;
+}
+
+
+
+.FormNoAddon {
+    padding: 2px 0;
+}
+
+.FormControl {
+    border:1px solid #dddddd;
+    width: 100%;
+    height: 23px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    color: #666;
+    font-family: Ubuntu-Regular;
+
+}
+
+.FormHandle {
+
+    font-family: Ubuntu-Bold;
+    color: #666666;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.counter {
+    margin:0 0 0 10px;
+    font-family: Ubuntu-Bold;
+    color: #666666;
+    text-align: left;
+    font-size: 13px;
+}
+
+.counter i {
+    color:#1690a2;
+    margin: 0 4px;
+}
+
+.DesBottom {
+    background-color: rgba(0, 0, 0, 0.11);
+    padding: 4px 0 2px 0;
+    height: 35px;
+    width: 100%;
+    margin: 0 0 0 0;
+
+}
+
+.pushRight{
+    margin: -5px 0 0 5px;
+    display: inline-block;
+    width: 70%;
+    height: 20px;
+}
+
+.forms {
+margin: 8px 0;
+    width: 100%;
+}
+
+.FormAddonDark {
+    display: inline-block;
+    font-family: Ubuntu-Bold;
+    font-size: 14px;
+    width: 100%;
+
+}
+
+.FormAddonDark .text {
+    margin:0 5px 0 0;
+}
+.FormAddonDark input[type="text"] {
+    border: 1px solid #e7e7e7;
+    border-right: none;
+    padding: 6px 8px 5px 3px;
+    font-size: 12px;
+    height: 15px;
+    color: #666666;
+    font-family: Ubuntu-Bold;
+    background-color: rgba(254, 254, 254, 0.6);
+    width: 100%;
+}
+
+.FormAddonDark input[type="text"]:focus {
+    outline: none;
+}
+
+.FormAddonDark i {
+    border: 1px solid #c2c2c2;
+    color: #666666;
+    height: 15px;
+    display: inline-block;
+    background-color: #c2c2c2;
+}
+.FormAddonDark .fa {
+    padding: 8px 8px 3px 8px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.FormBox {
+    padding: 5px 3px 10px 5px;
+    border-right:1px solid #FFFFFF;
+    box-shadow: 0 0 0 1px #dddddd;
+    font-family: Ubuntu-Regular;
+    color: #666;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.FormBox .fa {
+    -webkit-transform: rotate(88deg);
+    -moz-transform: rotate(88deg);
+    -ms-transform: rotate(88deg);
+    -o-transform: rotate(88deg);
+    transform: rotate(88deg);
+}
+
+.FormBox .head {
+    font-family: Ubuntu-Bold;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+.FormBox .head .fa {
+    color: #1690a2;
+    margin-right: 3px;
+}
+
+
+.FormBox .Span {
+    margin: 3px 3px;
+    display: inline-block;
+}
+
+.FormBox input[type="text"]{
+    padding: 5px 3px 5px 3px;
+    border:1px solid #dddddd;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    margin-top: 5px;
+    color: #666;
+    font-family: Ubuntu-Regular;
+    border-radius: 12px;
+    width: 90px;
+}
+
+
+.Milestone {
+    font-family: Ubuntu-Bold;
+    color: #666;
+    font-size: 13px;
+    margin: 5px 3px 15px 0;
+    display: inline-block;
+}
+
+.Milestone span {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.Milestone input[type="text"]{
+    padding: 5px 3px 5px 6px;
+    border:1px solid #dddddd;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    margin-top: 5px;
+    border-radius: 12px;
+    width: 120px;
+}
+.PostProject {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family: Ubuntu-Regular;
+}
+.PostProject .title {
+    color: #666666;
+    margin-bottom: 8px;
+    font-family: Ubuntu-Bold;
+    font-size: 13px;
+}
+
+.PostProject .title > i {
+    margin-top: 3px;
+    margin-left: 2px;
+    display: inline-block;
+}
+.PostProject .Milestone {
+    margin:0;
+    font-family: Ubuntu-Regular;
+    font-size: 12px;
+    float: left;
+    display: inline-block;
+}
+
+.Location-span {
+
+    font-family: Ubuntu-Bold;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 12px 3px 3px 3px;
+    display: block;
+    position: relative;
+    padding: 4px 0;
+}
+
+.Location-span .fa {
+    font-size: 16px;
+}
+
+.start-d-mid {
+
+    display: inline-block;
+    margin: 6px 0 0 0;
+    font-size: 13px;
+
+}
+
+.start-d-title {
+    font-family: Ubuntu-Bold;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
