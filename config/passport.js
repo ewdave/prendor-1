@@ -2,7 +2,7 @@
  * Created by ponty on 8/18/2015.
  */
 var LocalStrategy = require('passport-local').Strategy;
-var UserModel = require('./../models/userModel');
+var UserModel = require('./../models/users/userModel');
 var FacebookStrategy =  require("passport-facebook").Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var configAuth = require('./../config/social-plugins');
