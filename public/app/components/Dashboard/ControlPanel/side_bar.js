@@ -11,8 +11,6 @@ export default class SideBar extends Component {
         const team_name = this.props.teamName;
         const url_team_name = team_name+"_org";
 
-        console.log('rendering team layout man')
-
       if(team_name.length > 0){
           const team_dp = this.props.teamDp;
 
@@ -21,7 +19,7 @@ export default class SideBar extends Component {
                   <div className="head">
                       Team
                   </div>
-                  <div className="s-l-grp">
+                  <div className="s-l-grp create">
                       <a href="" className="link">Create Team</a>
                   </div>
                   <div className="profile">
@@ -63,6 +61,10 @@ export default class SideBar extends Component {
                       <a href="" className="link">Chat</a>
                   </div>
 
+                    <div className="s-l-grp">
+                      <Link to="/" className="title" activeClassName="active">News</Link>
+                      </div>
+
                   
               </div>
 
@@ -73,9 +75,14 @@ export default class SideBar extends Component {
                   <div className="head">
                       Team
                   </div>
-                  <div className="s-l-grp">
+                  <div className="s-l-grp create">
                       <a href="" className="link">Create Team</a>
                   </div>
+
+                  <div className="s-l-grp">
+                      <Link to="/" className="title" activeClassName="active">News</Link>
+                      </div>
+
               </div>
           )
       }
@@ -88,7 +95,7 @@ export default class SideBar extends Component {
 
         return(
             <div className="side-bar-component">
-                <div className="col-md-2 col-sm-2 hidden-xs">
+                <div className="col-md-2 hidden-sm hidden-xs">
                     <div className="side-bar-section">
                         <div className="head">
                             Individual
@@ -136,10 +143,7 @@ export default class SideBar extends Component {
 
                     {this.renderTeam()}
 
-                     <div className="s-l-grp news">
-                      <Link to="/" className="link" activeClassName="active">News</Link>
-                  </div>
-
+                     
                 </div>
             </div>
         )

@@ -6,8 +6,11 @@ $bbb:#bbb;
 $orange:#eca806;
 $our_black : #666;
 $body-bag: #f7f7f7;
-$b-btm-color: #4a4a4a;
+$b-btm-color: #B1AFAF;
 
+
+@mixin dBoxShadow($val...){
+}
 
 
 @mixin float($pos){

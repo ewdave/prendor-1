@@ -2,10 +2,10 @@
  * Created by ponty on 9/6/2015.
  */
 import React,{findDomNode,Component,PropTypes} from 'react';
-require('./dashboard.css');
+require('./dashboard.scss');
 require('./../css/boot.css');
 require('./../css/constants.scss');
-require('./../../components/fonts.css');
+require('./../css/shared.scss');
 
 import ControlPanel from './ControlPanel/controlPanel';
 import Header from './Header/header';
@@ -23,7 +23,7 @@ export default class DashBoard extends Component {
                     <div className="full">
                       <ControlPanel/>
                         
-                        <div className="col-md-10 col-sm-10">
+                        <div className="col-md-10 col-sm-12">
                             <div className="MainMiddleMonitor">
                                 {this.props.children}
                             </div>

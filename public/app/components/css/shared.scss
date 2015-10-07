@@ -1,4 +1,4 @@
-
+@import "constants";
 * {
     margin: 0;
     padding: 0;
@@ -24,31 +24,31 @@ a:visited,a:link,a:focus,a:active {
     margin: 0 0;
 }
 .blue {
-    color: #1690a2;
+    color: $our_blue;
 }
 
 .green {
     color: green;
 }
 .normal {
-    color:#666;
+    color:$our_black;
 }
 .red {
     color: #ff0000;
 }
 
 input:-moz-placeholder {
-    color:#666;
+    color:$our_black;
     font-family: Ubuntu-Medium;
 }
 
 input::-webkit-input-placeholder{
-    color:#666;
+    color:$our_black;
     font-family: Ubuntu-Medium;
 }
 
 input:-ms-input-placeholder {
-    color:#666;
+    color:$our_black;
     font-family: Ubuntu-Medium;
 }
 
@@ -121,12 +121,12 @@ input:focus {
     margin:0 0 0 0;
 }
 .FormAddon input[type="text"] {
-    border: 1px solid #c2c2c2;
+    border: 1px solid #e6e6e6;
     border-radius: 15px;
     padding: 5px 8px 5px 5px;
     font-size: 12px;
     height: 10px;
-    color: #666666;
+    color: $our_black;
     font-family: Ubuntu-Medium;
     background-color: #fff;
 }
@@ -136,8 +136,8 @@ input:focus {
 }
 
 .FormAddon button {
-    border: 1px solid #1690a2;
-    color: #666666;
+    border: 1px solid $our_blue;
+    color: $our_black;
     display: inline-block;
     background-color: #fff;
     border-radius: 16px;
@@ -150,10 +150,9 @@ input:focus {
 .Button {
 
     font-family: Ubuntu-Bold;
-
     border: none;
-    border-radius: 49%;
-    color: #666;
+    border-radius: 12px;
+    color: $our_black;
     box-shadow: inset 0 -1px 1px 0 #ffffff;
     background: -webkit-linear-gradient(90deg,rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
     background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
@@ -173,7 +172,7 @@ input:focus {
     font-family: Ubuntu-Bold;
     border: none;
     border-radius: 50%;
-    color: #666;
+    color: $our_black;
     box-shadow: inset 0 -1px 1px 0 #ffffff;
     background: -webkit-linear-gradient(90deg,rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
     background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
@@ -201,8 +200,8 @@ input:focus {
     height: 8px;
     width: 8px;
     content: "";
-    background-color: #1690a2;
-    border: 1px solid #1690a2;
+    background-color: $our_blue;
+    border: 1px solid $our_blue;
     margin-left: 3px;
 }
 .UnCheckBox {
@@ -227,7 +226,7 @@ input:focus {
 }
 
 .circleBlue {
-    background-color: #1690a2;
+    background-color: $our_blue;
     height: 14px;
     width: 14px;
     border-radius: 50%;
@@ -254,7 +253,7 @@ input:focus {
     width: 100%;
     height: 150px;
     padding: 5px 0 0 1px;
-    color: #666;
+    color: $our_black;
 }
 
 .TextArea:focus {
@@ -265,7 +264,7 @@ input:focus {
     resize: none;
     word-wrap: break-word;
     padding: 5px 0 0 1px;
-    color: #666;
+    color: $our_black;
 }
 
 .MultipleSelect {
@@ -336,7 +335,7 @@ input:focus {
     border-radius: 6px;
     font-family: Ubuntu-Regular;
     font-size: 12px;
-    color: #666;
+    color: $our_black;
     float: left;
 
 }
@@ -347,12 +346,12 @@ input:focus {
 }
 
 .SelectedList .Selected  .SelectedText {
-    border: 1px solid #c2c2c2;
+    border: 1px solid $idx-whitish;
     border-radius: 15px;
     padding: 1px 8px 6px 5px;
     font-size: 12px;
     height: 10px;
-    color: #666666;
+    color: $our_black;
     font-family: Ubuntu-Regular;
     background-color: #fff;
     display: inline-block;
@@ -364,8 +363,8 @@ input:focus {
 }
 
 .SelectedList .Selected   button {
-    border: 1px solid #c2c2c2;
-    color: #666666;
+    border: 1px solid $idx-whitish;
+    color: $our_black;
     display: inline-block;
     border-radius: 16px;
     cursor: pointer;
@@ -385,7 +384,7 @@ input:focus {
 .SelectedList .inputForm input[type="text"] {
     border: none;
     height: 22px;
-    color: #666666;
+    color: $our_black;
     background-color: transparent;
     font-family: Ubuntu-Medium;
     width: 260px;
@@ -401,7 +400,7 @@ input:focus {
 .categoryItem {
     font-family: Ubuntu-Regular;
     font-size: 12px;
-    color: #666;
+    color: $our_black;
     cursor: pointer;
     padding: 5px 6px;
 }
@@ -428,7 +427,7 @@ input:focus {
     position: absolute;
     bottom: 0;
     margin-left: 2px;
-    color: #1690a2;
+    color: $our_blue;
 }
 
 
@@ -442,7 +441,7 @@ input:focus {
     background-color: #ebebeb;
     font-family: Ubuntu-Bold;
     font-size: 36px;
-    color: #1690a2;
+    color: $our_blue;
     padding: 0 0;
     cursor: pointer;
 
@@ -472,7 +471,7 @@ input:focus {
     padding: 0 8px;
     border: none;
     border-radius: 50%;
-    color: #1690a2;
+    color: $our_blue;
     box-shadow: inset 0 -1px 1px 0 #ffffff;
     background: -webkit-linear-gradient(90deg,rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
     background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14),rgba(255,255,255,0.25));
@@ -490,7 +489,7 @@ input:focus {
 }
 
 .action > .delete > .tooltip {
-    background-color: #666666;
+    background-color: $our_black;
     border-radius: 6px;
     color: #fff;
     padding: 2px;
@@ -525,7 +524,7 @@ input:focus {
     top: 0;
     width: 4px;
     height: 2px;
-    background-color: #1690a2;
+    background-color: $our_blue;
     transition: width ease-out 1s;
 
 }
