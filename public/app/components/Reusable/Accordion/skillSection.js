@@ -1,7 +1,7 @@
 /**
  * Created by ponty on 9/14/2015.
  */
-import React,{Component} from 'react';
+import React,{Component,PropTypes} from 'react';
 import Accordion from './accordion'
 import AccordionMain from './AccordionMain'
 import CheckList from '../../Reusable/SelectBoxs/checkList'
@@ -1001,13 +1001,17 @@ export default class SkillSelection extends Component {
     }
 
     showAccordionComp = (e) => {
+        
         e.preventDefault();
         let showAccordion = this.state.showAccordion;
         if (!showAccordion) {
             this.setState({showAccordion: true})
+
         } else {
             this.setState({showAccordion: false})
         }
+
+        this.props.selectChange(this.getChosenList(this.state.listArray));
     };
     getChosenList = (array) => {
         let listArray = [];
@@ -1032,18 +1036,30 @@ export default class SkillSelection extends Component {
          * */
 
         let array = this.state.listArray;
+        let count = this.state.chosenCount;
         if(currentCount < 20){
-            array[parentIndex].subList[index].checked = !array[parentIndex].subList[index].checked;
 
-        } else {
-            //prompt user here but for now just alert
             if(array[parentIndex].subList[index].checked){
                 array[parentIndex].subList[index].checked = false;
+                count = count - 1;
+
+            } else {
+                 array[parentIndex].subList[index].checked = true;
+                 count = count + 1;
+            }
+           
+
+        } else {
+          
+            if(array[parentIndex].subList[index].checked){
+                array[parentIndex].subList[index].checked = false;
+                 count = count - 1;//
             } else {
                 alert("Sorry you cannot select more than 20 skills please uncheck a previous one if this must be used")
             }
         }
-        let count = this.getChosenList(array).length;
+
+
         this.setState({listArray:array,chosenCount:count});
 
     };
@@ -1089,4 +1105,10 @@ export default class SkillSelection extends Component {
             </div>
         )
     }
+}
+
+
+
+SkillSelection.propTypes = {
+    selectChange:PropTypes.func.isRequired
 }

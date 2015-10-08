@@ -15,8 +15,8 @@ export default class DashBoard extends Component {
     render() {
         return (
             <div>
-                <Header logo="http://localhost:3000/assets/icons/prendoricon-1bb51131c4d2de4f00934d43e3d4b189cadc706f457069c3005aaeddc1204102.png"
-                       dpUrl="http://localhost:3000/assets/icons/prendoricon-1bb51131c4d2de4f00934d43e3d4b189cadc706f457069c3005aaeddc1204102.png"
+                <Header logo="/images/prendoricon.png"
+                       dpUrl="/images/imageicon.png"
                        username="Xtterix Designs Company" />
 
                 <div className="MainBodySection">

@@ -439,17 +439,14 @@ input:focus {
     display: inline-block;
     background-color: #ebebeb;
     font-family: Ubuntu-Bold;
-    font-size: 29px;
     color: $our_blue;
-    padding: 0 0;
+    padding: 0;
     cursor: pointer;
-
-}
-.fileBox span {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    padding:0 10px;
+    border:2px solid $our_blue;
+    height: 35px;
+    width: 35px;
+    font-size: 29px;
+    text-align: center;
 
 }
 
