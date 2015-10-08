@@ -1,7 +1,7 @@
 /**
  * Created by ponty on 8/17/2015.
  */
-var UserModel = require('../models/userModel');
+var UserModel = require('../models/users/userModel');
 
 
 var Account = function(){

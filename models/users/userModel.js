@@ -24,7 +24,7 @@ var UserSchema = new mongoose.Schema({
     created_at:{type: Date, default: Date.now},
     encrypted_password:String,
     skills: [SkillSchema],
-    team_id:ObjectID
+    team_id:String
 
 },{collection:'userDetails'});
 
@@ -32,7 +32,7 @@ UserSchema.methods.generateHash = function (password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 UserSchema.methods.validatePassword = function (password) {
-    return bcrypt.compareSync(password, this.encrypted_password;
+    return bcrypt.compareSync(password, this.encrypted_password);
 };
 
 var UserModel = mongoose.model('UserModel', UserSchema);

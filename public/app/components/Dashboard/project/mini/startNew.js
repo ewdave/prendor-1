@@ -3,6 +3,8 @@
      */
     import React,{findDomNode,Component,PropTypes} from 'react';
     import SelectBox from './../../../Reusable/SelectBoxs/selectBox';
+    var ReactQuill = require('react-quill');
+    require('./../../../../../../node_modules/react-quill/node_modules/quill/dist/quill.snow.css');
     const array = [
         {item:2},
         {item:3},
@@ -49,6 +51,20 @@
                             </div>
                         </div>
 
+                        <div className="full">
+                        
+                        <div className="start-new-des">
+                            <div className="title">
+                                    Description
+                            </div>
+                            <div>
+                            <ReactQuill value="love them like jesus" theme="snow"/>
+                            </div>
+                        </div>
+                        
+
+                        </div>
+
                        
                    
 
@@ -56,7 +72,7 @@
 
                     
 
-                    <div className="col-md-4 col-sm-4 col-xs-9 col-md-push-1 col-sm-push-1">
+                    <div className="col-md-4 col-sm-4 col-xs-10 col-md-push-1 col-sm-push-1">
                         <div className="full">
                             <div className="col-md-11 col-sm-12">
                                 <div className="FormBox">
@@ -174,17 +190,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div className="full">
+                           <div className="col-md-6"></div>
+                           <div className="col-md-6">
+                           <p className="post-project"><button className="Button">Post Project <i className="fa fa-pencil-square-o"></i></button></p>
+                           </div>
+                        </div>
                     </div>
                 </div>
 
- <div className="full">
-                        <div className="col-md-10 col-xs-4 col-sm-8">
-
-                        </div>
-                        <div className="col-md-2 col-xs-6 col-sm-4">
-                            <button className="Button">Post Project <i className="fa fa-pencil-square-o"></i></button>
-                        </div>
-                    </div>
+ 
 
             </div>
             )

@@ -11,7 +11,7 @@ var TeamSchema = new mongoose.Schema({
     teamReviews:ObjectId,
     teamAccount:ObjectId,
     teamAdmin:ObjectId
-});
+},{collection:'teamDetails'});
 
 /**
  *

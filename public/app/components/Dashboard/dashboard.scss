@@ -225,7 +225,7 @@ margin: 8px 0;
                     padding: 4px;
                     font-family: Ubuntu-Regular;
                     @include all-Borders(1px solid $idx-whitish);
-                    width: 35px;
+                    width: 40px;
                     margin: 0 3px;
                 }
             }
@@ -288,7 +288,7 @@ margin: 8px 0;
     font-family: Ubuntu-Bold;
     cursor: pointer;
     font-size: 13px;
-    margin: 12px 3px 3px 3px;
+    margin: 12px 3px 6px 3px;
     display: block;
     position: relative;
     padding: 4px 0;
@@ -318,4 +318,37 @@ margin: 8px 0;
     .full .start-left {
             margin-left: 20px;
 }
+}
+
+
+.quill {
+    width: 100%;
+    position: relative;
+    height: 460px;
+}
+
+.quill-toolbar {
+  position: absolute;
+  bottom: 0;
+  background: $bg-ground;
+}
+
+.quill-contents.ql-container.ql-snow {
+    display: block;
+    height: 420px;
+    background: #fff;
+}
+
+.start-new-des {
+    & .title {
+        @include l-gradient($bg-ground 5%,#fff);
+       padding: 6px 6px 8px 6px;
+       color: $our_blue;
+    }
+}
+
+
+.post-project {
+
+    margin-top: 30px;
 }
