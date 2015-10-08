@@ -100,7 +100,7 @@ a:hover {
 
     & span {
       margin-left: 4px;
-      margin-top:4px;
+      margin-top:8px;
       display:inline-block;
       float: left;
     }
@@ -123,6 +123,10 @@ a:hover {
     margin: 3px 5px 3px 5px;
     display: inline-block;
     text-align: center;
+    i {
+
+    @include all-transform(rotate(30deg));
+    }
 
 
   }
