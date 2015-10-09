@@ -8,11 +8,22 @@ export default class AccordionMain extends Component {
 
     render(){
         const className = this.props.activeClass;
+        const isActive  = this.props.isActive;
+        let children;
+        if(isActive){
+            children = this.props.children;
+        } else {
+            children = "";
+        }
+        console.log(isActive)
         return(
-            <li className={className} onClick={this.props.setActive}>
-                <span>{this.props.text}</span><i className="fa fa-arrow-up"></i>
-                {this.props.children}
-                </li>
+           <div>
+            <div className={className} onClick={this.props.setActive}>
+                <span className="title">{this.props.text}</span>
+                
+                </div>
+                {children}
+           </div>
         )
     }
 }

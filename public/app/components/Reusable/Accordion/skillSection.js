@@ -13,19 +13,13 @@ import CheckList from '../../Reusable/SelectBoxs/checkList'
 
 const skillList = [
     {
-        "main_name": "Websites, IT & Software",
+        "main_name": "Websites",
         "subList": [
-            {"item": "Active Directory", "checked": false}, {
-                "item": "Adobe Air",
-                "checked": false
-            }, {"item": "Adobe Lightroom", "checked": false}, {"item": "Agile Development", "checked": false}, {
+            {
                 "item": "AJAX",
                 "checked": false
-            }, {"item": "Alibaba", "checked": false}, {"item": "Amazon Web Services", "checked": false}, {
+            },{
                 "item": "AMQP",
-                "checked": false
-            }, {"item": "Analytics", "checked": false}, {"item": "Android Wear SDK", "checked": false}, {
-                "item": "Angular.js",
                 "checked": false
             }, {"item": "Apache", "checked": false}, {"item": "Apache Solr", "checked": false}, {
                 "item": "Apple Safari",
@@ -39,25 +33,13 @@ const skillList = [
             }, {"item": "Asterisk PBX", "checked": false}, {
                 "item": "Augmented Reality",
                 "checked": false
-            }, {"item": "AutoHotkey", "checked": false}, {"item": "Azure", "checked": false}, {
-                "item": "backbone.js",
-                "checked": false
-            }, {"item": "Balsamiq", "checked": false}, {"item": "Big Data", "checked": false}, {
+            }, {"item": "AutoHotkey", "checked": false}, {"item": "Big Data", "checked": false}, {
                 "item": "BigCommerce",
                 "checked": false
-            }, {"item": "Binary Analysis", "checked": false}, {"item": "Bitcoin", "checked": false}, {
-                "item": "Biztalk",
-                "checked": false
-            }, {"item": "Blog Install", "checked": false}, {
+            },{"item": "Blog Install", "checked": false}, {
                 "item": "Bluetooth Low Energy (BLE)",
                 "checked": false
-            }, {"item": "BMC Remedy", "checked": false}, {"item": "Boonex Dolphin", "checked": false}, {
-                "item": "Bower",
-                "checked": false
-            }, {"item": "BSD", "checked": false}, {"item": "Business Catalyst", "checked": false}, {
-                "item": "C Programming",
-                "checked": false
-            }, {"item": "C# Programming", "checked": false}, {"item": "C++ Programming", "checked": false}, {
+            }, {"item": "BMC Remedy", "checked": false}, {"item": "Boonex Dolphin", "checked": false},  {"item": "BSD", "checked": false},  {
                 "item": "CakePHP",
                 "checked": false
             }, {"item": "Call Control XML", "checked": false}, {"item": "CasperJS", "checked": false}, {
@@ -66,91 +48,44 @@ const skillList = [
             }, {"item": "Chef Configuration Management", "checked": false}, {
                 "item": "Chordiant",
                 "checked": false
-            }, {"item": "Chrome OS", "checked": false}, {"item": "Cisco", "checked": false}, {
-                "item": "Cloud Computing",
-                "checked": false
-            }, {"item": "CMS", "checked": false}, {"item": "COBOL", "checked": false}, {
-                "item": "Cocoa",
-                "checked": false
-            }, {"item": "Codeigniter", "checked": false}, {
-                "item": "Cold Fusion",
-                "checked": false
-            }, {"item": "Computer Graphics", "checked": false}, {
-                "item": "Computer Security",
-                "checked": false
-            }, {"item": "CRE Loaded", "checked": false}, {"item": "CS-Cart", "checked": false}, {
-                "item": "CubeCart",
-                "checked": false
-            }, {"item": "CUDA", "checked": false}, {"item": "D3.js", "checked": false}, {
+            },  {"item": "COBOL", "checked": false},
+             {"item": "CRE Loaded", "checked": false}, 
+              {"item": "CUDA", "checked": false}, {
                 "item": "Dari",
                 "checked": false
             }, {"item": "Dart", "checked": false}, {
                 "item": "Data Warehousing",
                 "checked": false
-            }, {"item": "Database Administration", "checked": false}, {
-                "item": "Database Development",
-                "checked": false
-            }, {"item": "Database Programming", "checked": false}, {"item": "DDS", "checked": false}, {
-                "item": "Debian",
-                "checked": false
-            }, {"item": "Debugging", "checked": false}, {"item": "Delphi", "checked": false}, {
+            }, {
                 "item": "Django",
                 "checked": false
             }, {"item": "DNS", "checked": false}, {"item": "DOS", "checked": false}, {
                 "item": "DotNetNuke",
                 "checked": false
-            }, {"item": "Drupal", "checked": false}, {"item": "Dynamics", "checked": false}, {
-                "item": "eCommerce",
-                "checked": false
-            }, {"item": "edX", "checked": false}, {"item": "Elasticsearch", "checked": false}, {
+            }, {"item": "Drupal", "checked": false}, {"item": "Dynamics", "checked": false}, 
+             {"item": "edX", "checked": false}, {"item": "Elasticsearch", "checked": false}, {
                 "item": "eLearning",
                 "checked": false
             }, {"item": "Electronic Forms", "checked": false}, {
                 "item": "Embedded Software",
                 "checked": false
-            }, {"item": "Ember.js", "checked": false}, {"item": "Erlang", "checked": false}, {
+            }, {
                 "item": "Estonian",
                 "checked": false
-            }, {"item": "Express JS", "checked": false}, {
-                "item": "Expression Engine",
-                "checked": false
-            }, {"item": "Face Recognition", "checked": false}, {"item": "FileMaker", "checked": false}, {
+            }, {
                 "item": "Firefox",
                 "checked": false
             }, {"item": "Fortran", "checked": false}, {"item": "Forum Software", "checked": false}, {
                 "item": "FreelancerAPI",
                 "checked": false
-            }, {"item": "Game Consoles", "checked": false}, {
-                "item": "Game Design",
-                "checked": false
-            }, {"item": "Game Development", "checked": false}, {"item": "GameSalad", "checked": false}, {
-                "item": "Gamification",
-                "checked": false
-            }, {"item": "Git", "checked": false}, {"item": "Golang", "checked": false}, {
-                "item": "Google Analytics",
-                "checked": false
-            }, {"item": "Google App Engine", "checked": false}, {
-                "item": "Google Cardboard",
-                "checked": false
-            }, {"item": "Google Chrome", "checked": false}, {
-                "item": "Google Earth",
-                "checked": false
-            }, {"item": "Google Maps API", "checked": false}, {
-                "item": "Google Plus",
-                "checked": false
-            }, {"item": "Google Web Toolkit", "checked": false}, {
-                "item": "Google Webmaster Tools",
-                "checked": false
-            }, {"item": "Google Website Optimizer", "checked": false}, {"item": "GoPro", "checked": false}, {
+            }, {"item": "Golang", "checked": false}, 
+             {"item": "GoPro", "checked": false}, {
                 "item": "GPGPU",
                 "checked": false
             }, {"item": "Grease Monkey", "checked": false}, {"item": "Growth Hacking", "checked": false}, {
-                "item": "Grunt",
-                "checked": false
-            }, {"item": "Hadoop", "checked": false}, {"item": "Haskell", "checked": false}, {
                 "item": "HBase",
                 "checked": false
-            }, {"item": "Heroku", "checked": false}, {"item": "Hive", "checked": false}, {
+            },  {"item": "Hive", "checked": false}, {
                 "item": "HomeKit",
                 "checked": false
             }, {"item": "HP Openview", "checked": false}, {"item": "HTML", "checked": false}, {
@@ -162,19 +97,16 @@ const skillList = [
             }, {"item": "IBM Websphere Transformation Tool", "checked": false}, {
                 "item": "IIS",
                 "checked": false
-            }, {"item": "Instagram", "checked": false}, {"item": "Internet Security", "checked": false}, {
+            }, {"item": "Instagram", "checked": false}, {
                 "item": "Interspire",
                 "checked": false
             }, {"item": "ITIL", "checked": false}, {"item": "J2EE", "checked": false}, {
                 "item": "Jabber",
                 "checked": false
-            }, {"item": "Java", "checked": false}, {"item": "JavaFX", "checked": false}, {
-                "item": "Javascript",
-                "checked": false
-            }, {"item": "Joomla", "checked": false}, {"item": "jQuery / Prototype", "checked": false}, {
+            }, {"item": "Java", "checked": false}, {"item": "JavaFX", "checked": false},  {
                 "item": "JSP",
                 "checked": false
-            }, {"item": "Kinect", "checked": false}, {"item": "Knockout.js", "checked": false}, {
+            }, {"item": "Kinect", "checked": false}, {
                 "item": "LabVIEW",
                 "checked": false
             }, {"item": "Laravel", "checked": false}, {"item": "Leap Motion SDK", "checked": false}, {
@@ -189,31 +121,15 @@ const skillList = [
             }, {"item": "Magento", "checked": false}, {"item": "Magic Leap", "checked": false}, {
                 "item": "Map Reduce",
                 "checked": false
-            }, {"item": "MariaDB", "checked": false}, {"item": "Metatrader", "checked": false}, {
-                "item": "Microsoft",
-                "checked": false
-            }, {"item": "Microsoft Access", "checked": false}, {
-                "item": "Microsoft Exchange",
-                "checked": false
-            }, {"item": "Microsoft Expression", "checked": false}, {
-                "item": "Microsoft Hololens",
-                "checked": false
-            }, {"item": "Microsoft SQL Server", "checked": false}, {
-                "item": "MMORPG",
-                "checked": false
-            }, {"item": "Mobile App Testing", "checked": false}, {"item": "MODx", "checked": false}, {
+            }, {"item": "MariaDB", "checked": false}, {"item": "Metatrader", "checked": false}, {"item": "MODx", "checked": false}, {
                 "item": "MonetDB",
                 "checked": false
             }, {"item": "Moodle", "checked": false}, {"item": "MQTT", "checked": false}, {
                 "item": "MVC",
                 "checked": false
-            }, {"item": "MySpace", "checked": false}, {"item": "MySQL", "checked": false}, {
-                "item": "Network Administration",
-                "checked": false
-            }, {"item": "Nginx", "checked": false}, {"item": "Ning", "checked": false}, {
-                "item": "node.js",
-                "checked": false
-            }, {"item": "NoSQL Couch & Mongo", "checked": false}, {"item": "Objective C", "checked": false}, {
+            }, {"item": "MySpace", "checked": false}, {"item": "MySQL", "checked": false},
+            {"item": "Nginx", "checked": false}, {"item": "Ning", "checked": false},
+             {"item": "NoSQL Couch & Mongo", "checked": false}, {"item": "Objective C", "checked": false}, {
                 "item": "OCR",
                 "checked": false
             }, {"item": "Oculus Mobile SDK", "checked": false}, {"item": "Open Cart", "checked": false}, {
@@ -231,7 +147,7 @@ const skillList = [
             }, {"item": "Parallels Desktop", "checked": false}, {
                 "item": "Pattern Matching",
                 "checked": false
-            }, {"item": "Paypal API", "checked": false}, {"item": "PencilBlue CMS", "checked": false}, {
+            },  {"item": "PencilBlue CMS", "checked": false}, {
                 "item": "Pentaho",
                 "checked": false
             }, {"item": "Perl", "checked": false}, {"item": "PhoneGap", "checked": false}, {
@@ -246,13 +162,7 @@ const skillList = [
             }, {"item": "Prestashop", "checked": false}, {"item": "Prolog", "checked": false}, {
                 "item": "Protoshare",
                 "checked": false
-            }, {"item": "Puppet", "checked": false}, {"item": "Python", "checked": false}, {
-                "item": "QlikView",
-                "checked": false
-            }, {"item": "Qualtrics Survey Platform", "checked": false}, {
-                "item": "QuickBase",
-                "checked": false
-            }, {"item": "R Programming Language", "checked": false}, {
+            }, {"item": "Puppet", "checked": false}, {
                 "item": "React.js",
                 "checked": false
             }, {"item": "REALbasic", "checked": false}, {"item": "Red Hat", "checked": false}, {
@@ -282,10 +192,8 @@ const skillList = [
             }, {"item": "Smarty PHP", "checked": false}, {"item": "Snapchat", "checked": false}, {
                 "item": "Social Engine",
                 "checked": false
-            }, {"item": "Social Networking", "checked": false}, {
-                "item": "Socket IO",
-                "checked": false
-            }, {"item": "Software Architecture", "checked": false}, {
+            }, {"item": "Social Networking", "checked": false},
+             {"item": "Software Architecture", "checked": false}, {
                 "item": "Software Development",
                 "checked": false
             }, {"item": "Software Testing", "checked": false}, {"item": "Solaris", "checked": false}, {
@@ -309,13 +217,8 @@ const skillList = [
             }, {"item": "Tumblr", "checked": false}, {"item": "Twitter", "checked": false}, {
                 "item": "TYPO3",
                 "checked": false
-            }, {"item": "Ubuntu", "checked": false}, {"item": "Umbraco", "checked": false}, {
-                "item": "UML Design",
-                "checked": false
-            }, {"item": "Unity 3D", "checked": false}, {"item": "UNIX", "checked": false}, {
-                "item": "Usability Testing",
-                "checked": false
-            }, {"item": "User Interface / IA", "checked": false}, {"item": "VB.NET", "checked": false}, {
+            }, {"item": "Ubuntu", "checked": false}, {"item": "Umbraco", "checked": false},
+             {"item": "VB.NET", "checked": false}, {
                 "item": "vBulletin",
                 "checked": false
             }, {"item": "VertexFX", "checked": false}, {"item": "Virtual Worlds", "checked": false}, {
@@ -345,10 +248,7 @@ const skillList = [
             }, {"item": "Website Testing", "checked": false}, {"item": "Weebly", "checked": false}, {
                 "item": "WHMCS",
                 "checked": false
-            }, {"item": "Windows 8", "checked": false}, {"item": "Windows API", "checked": false}, {
-                "item": "Windows Desktop",
-                "checked": false
-            }, {"item": "Windows Server", "checked": false}, {"item": "Wix", "checked": false}, {
+            }, {"item": "Wix", "checked": false}, {
                 "item": "Wordpress",
                 "checked": false
             }, {"item": "WPF", "checked": false}, {"item": "Wufoo", "checked": false}, {
@@ -367,6 +267,152 @@ const skillList = [
                 "item": "Zoho",
                 "checked": false
             }]
+    },
+    {"main_name": "Dev Tools / Frameworks",
+    "subList":[ {
+                "item": "Angular.js",
+                "checked": false
+            }
+            , {"item": "Balsamiq", "checked": false},
+            {
+                "item": "Bower",
+                "checked": false
+            },
+              {
+                "item": "backbone.js",
+                "checked": false
+            },
+             {
+                "item": "Cocoa",
+                "checked": false
+            }, {"item": "Codeigniter", "checked": false}, {
+                "item": "Cold Fusion",
+                "checked": false
+            }, 
+            {"item": "CS-Cart", "checked": false}, {
+                "item": "CubeCart",
+                "checked": false
+            },
+            {"item": "D3.js", "checked": false},
+            {
+                "item": "eCommerce",
+                "checked": false
+            },
+            {"item": "Ember.js", "checked": false}, {"item": "Erlang", "checked": false}, 
+             {"item": "Express JS", "checked": false}, 
+              {
+                "item": "Grunt",
+                "checked": false
+            }, {"item": "Hadoop", "checked": false}, {"item": "Haskell", "checked": false},
+            {
+                "item": "Google Analytics",
+                "checked": false
+            }, {"item": "Google App Engine", "checked": false}, {
+                "item": "Google Cardboard",
+                "checked": false
+            }, {"item": "Google Chrome", "checked": false}, {
+                "item": "Google Earth",
+                "checked": false
+            }, {"item": "Google Maps API", "checked": false}, {
+                "item": "Google Plus",
+                "checked": false
+            }, {"item": "Google Web Toolkit", "checked": false}, {
+                "item": "Google Webmaster Tools",
+                "checked": false
+            }, {"item": "Google Website Optimizer", "checked": false},
+            {
+                "item": "Javascript",
+                "checked": false
+            }, {"item": "Joomla", "checked": false}, {"item": "jQuery / Prototype", "checked": false},
+             {"item": "Knockout.js", "checked": false},
+              {
+                "item": "node.js",
+                "checked": false
+            },
+            {"item": "Paypal API", "checked": false},
+             {
+                "item": "Socket IO",
+                "checked": false
+            }]},
+    {
+        "main_name" : "IT & Software",
+        "subList" : [
+            {"item": "Active Directory", "checked": false}, 
+            { "item": "Adobe Air","checked": false}, 
+            {"item": "Adobe Lightroom", "checked": false}, 
+            {"item": "Agile Development", "checked": false}, 
+            {"item": "Analytics", "checked": false}, 
+            {"item": "Android Wear SDK", "checked": false},
+             {"item": "Binary Analysis", "checked": false},
+              {"item": "Bitcoin", "checked": false},
+               {"item": "Biztalk","checked": false}, 
+               {"item": "Business Catalyst", "checked": false}, {
+                "item": "C Programming",
+                "checked": false
+            }, {"item": "C# Programming", "checked": false}, {"item": "C++ Programming", "checked": false},
+             {"item": "Chrome OS", "checked": false}, {"item": "Cisco", "checked": false}, {
+                "item": "Cloud Computing",
+                "checked": false
+            },{"item": "Computer Graphics", "checked": false}, {
+                "item": "Computer Security",
+                "checked": false
+            },{"item": "Database Administration", "checked": false}, {
+                "item": "Database Development",
+                "checked": false
+            }, {"item": "Database Programming", "checked": false}, {"item": "DDS", "checked": false}, {
+                "item": "Debian",
+                "checked": false
+            }, {"item": "Debugging", "checked": false}, {"item": "Delphi", "checked": false},
+            , {"item": "Game Consoles", "checked": false}, {
+                "item": "Game Design",
+                "checked": false
+            }, {"item": "Game Development", "checked": false}, {"item": "GameSalad", "checked": false}, {
+                "item": "Gamification",
+                "checked": false
+            }, {"item": "Git", "checked": false},
+            {"item": "Heroku", "checked": false},
+            {"item": "Azure", "checked": false},
+             {"item": "Amazon Web Services", "checked": false}, 
+              {"item": "Alibaba", "checked": false},
+              {
+                "item": "Expression Engine",
+                "checked": false
+            }, {"item": "Face Recognition", "checked": false}, {"item": "FileMaker", "checked": false},
+             {"item": "Internet Security", "checked": false},
+             {
+                "item": "Microsoft",
+                "checked": false
+            }, {"item": "Microsoft Access", "checked": false}, {
+                "item": "Microsoft Exchange",
+                "checked": false
+            }, {"item": "Microsoft Expression", "checked": false}, {
+                "item": "Microsoft Hololens",
+                "checked": false
+            }, {"item": "Microsoft SQL Server", "checked": false}, {
+                "item": "MMORPG",
+                "checked": false
+            }, {"item": "Mobile App Testing", "checked": false},
+             {
+                "item": "Network Administration",
+                "checked": false
+            },  {"item": "Python", "checked": false}, {
+                "item": "QlikView",
+                "checked": false
+            }, {"item": "Qualtrics Survey Platform", "checked": false}, {
+                "item": "QuickBase",
+                "checked": false
+            }, {"item": "R Programming Language", "checked": false},
+             {
+                "item": "UML Design",
+                "checked": false
+            }, {"item": "Unity 3D", "checked": false}, {"item": "UNIX", "checked": false}, {
+                "item": "Usability Testing",
+                "checked": false
+            }, {"item": "User Interface / IA", "checked": false},
+             {"item": "Windows 8", "checked": false}, {"item": "Windows API", "checked": false}, {
+                "item": "Windows Desktop",
+                "checked": false
+            }, {"item": "Windows Server", "checked": false}]
     },
     {
         "main_name": "Mobile Phones & Computing",

@@ -2,6 +2,7 @@
  * Created by ponty on 9/14/2015.
  */
 import React,{findDOMNode,Component,PropTypes} from 'react';
+import GeminiScrollbar from 'react-gemini-scrollbar';
 
 export default class CheckList extends Component {
 
@@ -14,7 +15,8 @@ export default class CheckList extends Component {
         const listItems = this.props.listItems;
         const parentIndex = this.props.parentIndex;
         return (
-            <div className="Accordion-SubList">
+            <div className="CheckBody">
+          
                 {
                     listItems.map((content, index)=> {
                         if(content.checked){
