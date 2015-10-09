@@ -15,11 +15,45 @@
 
 .SearchActivity > .Inline-form {
     float: left;
-    margin: 13px 11px 10px 11px;
+    margin: 10px 11px 0 11px;
     position: relative;
     width: 50%;
 }
 
+.Inline-form.first {
+    margin: 1px 11px 0 11px; 
+}
+
+.Inline-form .title {
+    margin-bottom: 3px;
+    display: block;
+    color: #1690a2;
+    font-family: Ubuntu-Bold;
+    
+}
+
+.Inline-form .Location-span {
+    margin: 0;
+    
+}
+
+.locale-search {
+    display: inline-block;
+    float: left;
+    margin-top: 13px;
+    font-size: 13px;
+    font-family: Ubuntu-Bold;
+}
+
+.locale-search span {
+    display: inline-block;
+    margin: 0 3px;
+    color: #1690a2;
+}
+
+.locale-search .fa {
+    font-size: 19px;
+}
 
 .Duration {
     width: 80%;

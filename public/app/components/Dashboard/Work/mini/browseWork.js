@@ -639,34 +639,57 @@ export default class BrowseWork extends Component {
         return (
             <div className="BidPlatform">
                 <div className="SearchActivity">
-                    <div className="Inline-form">
+                    <div className="Inline-form first">
                         <div className="full">
                             <div className="col-md-6">
-                                <span className="FormAddon"><input type="text" placeholder="Search Project"
+                            <div className="title"><i className="fa fa-search"></i> Search</div>
+                                <span className="FormAddon">
+                                <input type="text" placeholder="Search Project"
                                                                    style={divStyle}/></span>
                             </div>
                             <div className="col-md-6">
-                            <span className="Duration">
-                            <SelectBox listArray={array} className="DropSelect"/>
-                            </span>
+                            <div className="title"><i className="fa fa-clock-o"></i> Duration</div>
+                             <div className="duration-comp">
+                                       <span className="tags">
+                                            <input type="number" ref="weeks"/>
+                                            <i>Weeks</i>
+                                            </span>
+                                            <span className="tags">
+                                            <input type="number" ref="days"/>
+                                            <i>Days</i>
+                                            </span>
+                                        
+                                        </div>
                             </div>
                         </div>
                     </div>
                 <RangeSlider title="Avg Hourly Price" />
                     <RangeSlider title="Avg Price" />
+                    <div className="Inline-form">
                     <div className="full">
-                        <div className="col-md-3 col-sm-6">
+                        <div className="col-md-6 col-sm-6">
                             <div className="SkillSection">
                             <SkillSelection/>
                             </div>
                         </div>
-                        <div className="col-md-3 col-sm-6 col-md-push-1">
-                           
+                        <div className="col-md-6 col-sm-6">
+                            <span className="Location-span"><span className="blue"><i className="fa fa-map-marker"></i>  Location</span><span
+                                            className="caret-lower"><i className="fa fa-caret-down"></i></span></span>
                         </div>
-                        <div className="col-md-3 col-sm-6 col-md-push-1">
-                            
-                        </div>
+                        
                     </div>
+
+                 </div>
+
+                    <div className="locale-search">
+                    <span><i className="fa fa-language"></i>Locale</span>
+                    <span className="FormAddon"><input type="text" placeholder="Locale" style={divStyle}/></span>
+                    </div>
+
+
+
+
+
                 </div>
 
                 <div className="BySkill">
