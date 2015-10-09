@@ -1,5 +1,7 @@
 @import "./../../css/constants.scss";
 
+
+
 .ProjectItem-Body {
     border:none;
     font-family: Ubuntu-Regular;
@@ -7,10 +9,17 @@
     display: inline-block;
     width: 99%;
     cursor: pointer;
-    transition: all ease-out 1s;
     background: #1690a2;
     position: relative;
-    margin: 1px;
+    margin-bottom: 2px;
+
+    &:hover {
+
+            .ProjectItem {
+                box-shadow: 4px 4px 4px 0 #0b454e;
+            }
+
+    }
 
     & .project-item-bid {
         border:2px solid #fff;
@@ -37,18 +46,9 @@
     cursor: pointer;
     border-bottom-right-radius: 130px;
     background: #f7f7f7;
-    @include transition(box-shadow ease-out .5s);
+    @include transition(all ease-out 0.2s);
 }
 
-.ProjectItem-Body:hover .ProjectItem{
-    box-shadow: 2px 1px 2px -1px #000,1px 1px 2px -1px #000,0 1px 4px #000;
-}
-
-.ProjectItem.active {
-    border-left: 7px solid #1690a2;
-    width: 96%;
-    margin: 1px 2px 1px 0;
-}
 
 .ProjectItem .Proj-i-row {
     margin:4px 2px;

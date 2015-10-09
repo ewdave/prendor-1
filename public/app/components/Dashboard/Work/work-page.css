@@ -72,26 +72,18 @@
 
 @media screen and (max-width: 768px){
     .BySkill {
-        margin: 0 0;
         padding: 0 0;
         width: 100%;
         height: 100%;
     }
 
+   
     .Duration {
         width: 150px;
         display: inline-block;
         font-size: 14px;
     }
 
-    .RangeCollection {
-        float: left;
-        margin: 10px 0 10px 28px;
-        display: inline-block;
-        width: 200px;
-        color: #666666;
-
-    }
 
     .SearchActivity {
         display: inline-block;
@@ -105,8 +97,12 @@
     .SearchActivity > .Inline-form {
         float: left;
         position: relative;
-        width: 50%;
-            margin: 13px 11px 10px 11px;
+        width: 70%;
+        margin: 13px 11px 10px 11px;
+    }
+
+    .locale-search {
+        margin: 13px 11px 10px 11px; 
     }
 
 }

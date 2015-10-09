@@ -28,6 +28,7 @@
     box-shadow: 0 2px 10px -1px #ABABAB;
     height: auto;
     font-family: Ubuntu-Regular;
+    z-index: 88;
 
 
 }
@@ -76,6 +77,10 @@
     cursor: pointer;
     background: $bg-ground;
     display: block;
+
+    & .title {
+        color: $our_black;
+    }
 }
 
 
@@ -86,6 +91,7 @@
             & .title {
         background: $bg-ground;
         display: inline-block;
+        color: $our_blue;
             }
 }
 

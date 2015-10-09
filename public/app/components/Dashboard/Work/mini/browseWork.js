@@ -641,13 +641,13 @@ export default class BrowseWork extends Component {
                 <div className="SearchActivity">
                     <div className="Inline-form first">
                         <div className="full">
-                            <div className="col-md-6">
+                            <div className="col-md-6 col-xs-10">
                             <div className="title"><i className="fa fa-search"></i> Search</div>
                                 <span className="FormAddon">
                                 <input type="text" placeholder="Search Project"
                                                                    style={divStyle}/></span>
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-md-6 col-xs-10">
                             <div className="title"><i className="fa fa-clock-o"></i> Duration</div>
                              <div className="duration-comp">
                                        <span className="tags">
@@ -667,12 +667,12 @@ export default class BrowseWork extends Component {
                     <RangeSlider title="Avg Price" />
                     <div className="Inline-form">
                     <div className="full">
-                        <div className="col-md-6 col-sm-6">
+                        <div className="col-md-6 col-sm-6 col-xs-10">
                             <div className="SkillSection">
                             <SkillSelection/>
                             </div>
                         </div>
-                        <div className="col-md-6 col-sm-6">
+                        <div className="col-md-6 col-sm-6 col-xs-10">
                             <span className="Location-span"><span className="blue"><i className="fa fa-map-marker"></i>  Location</span><span
                                             className="caret-lower"><i className="fa fa-caret-down"></i></span></span>
                         </div>
@@ -680,6 +680,7 @@ export default class BrowseWork extends Component {
                     </div>
 
                  </div>
+
 
                     <div className="locale-search">
                     <span><i className="fa fa-language"></i>Locale</span>
@@ -700,7 +701,7 @@ export default class BrowseWork extends Component {
                                 {
                                     pObj.map((content, index)=> {
                                         return (
-                                            <div className="col-md-3 col-xs-12 col-sm-4" key={index}>
+                                            <div className="col-md-3 col-xs-10 col-sm-4" key={index}>
                                                 <ProjectItem projectObj={content}/>
                                             </div>
                                         )

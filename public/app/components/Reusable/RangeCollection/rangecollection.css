@@ -25,6 +25,18 @@
 }
 
 
+@media screen and (max-width: 768px){
+    
+    .RangeCollection {
+        float: left;
+        margin: 10px 0 10px 28px;
+        display: inline-block;
+        width: 200px;
+        color: #666666;
+
+    }
+}
+
 
 .noUi-horizontal .noUi-handle {
     width: 25px;
