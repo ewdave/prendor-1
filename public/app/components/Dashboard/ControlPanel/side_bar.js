@@ -16,7 +16,7 @@ export default class SideBar extends Component {
                 <div className="col-md-2 hidden-sm hidden-xs">
                     <div className="side-bar-section">
                         <div className="head">
-                            Individual
+                            Dashboard
                         </div>
                         <div className="profile">
         <span>
@@ -55,6 +55,15 @@ export default class SideBar extends Component {
                         </div>
                         <div className="s-l-grp">
                             <a href="" className="link">Payment</a>
+                        </div>
+                        <div className="s-l-grp">
+                            <a href="" className="link">Chat</a>
+                        </div>
+                        <div className="s-l-grp">
+                            <a href="" className="link">Todos</a>
+                        </div>
+                        <div className="s-l-grp">
+                            <a href="" className="link">Tasks</a>
                         </div>
 
                     </div>

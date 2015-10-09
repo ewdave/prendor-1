@@ -6,90 +6,8 @@ var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 import ProjectItem from './../../../Reusable/ProjectItem/projectItem';
 import RangeSlider from './../../../Reusable/RangeCollection/rangeSlider';
 import GeminiScrollbar from 'react-gemini-scrollbar';
-import SelectBox from './../../../Reusable/SelectBoxs/selectBox';
 import SkillSelection from './../../../Reusable/Accordion/skillSection'
-var array = [
-    {
-        item: "Duration"
-    },
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Nia"},
-    {item: "Portugal"},
-    {item: "Brazil"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Deborah"},
-    {item: "Republic of Congo"},
-    {item: "Zimbabwe"},
-    {item: "Bostwana"},
-    {item: "Ayomide"}
-];
+
 const pObj = [
     {
         pID: 1022920,
@@ -701,7 +619,7 @@ export default class BrowseWork extends Component {
                                 {
                                     pObj.map((content, index)=> {
                                         return (
-                                            <div className="col-md-3 col-xs-10 col-sm-4" key={index}>
+                                            <div className="col-md-3 col-xs-9 col-sm-4" key={index}>
                                                 <ProjectItem projectObj={content}/>
                                             </div>
                                         )
