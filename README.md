@@ -1,2 +1,1 @@
-missing file confi/social-plugins.js in repo
-Should mail it to u
+There is nothing here so skip it
