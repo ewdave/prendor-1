@@ -1132,7 +1132,7 @@ export default class SkillSelection extends Component {
 
                 {showAccordion ?
                     <div className="BodyCategory">
-                        <span className="CatTab">Field</span>
+                        <span className="CatTab">Skills</span>
                         <Accordion>
                             { items }
                         </Accordion>

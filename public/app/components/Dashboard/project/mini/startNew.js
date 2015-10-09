@@ -88,8 +88,10 @@
 
                             </div>
                         </div>
-                        <div className="SkillSection">
+                        <div className="full">
+                            <div className="col-md-8">
                             <SkillSelection selectChange={() => this.getSkill}/>
+                            </div>
 
                         </div>
 
