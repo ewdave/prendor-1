@@ -655,10 +655,16 @@ export default class BrowseWork extends Component {
                 <RangeSlider title="Avg Hourly Price" />
                     <RangeSlider title="Avg Price" />
                     <div className="full">
-                        <div className="col-md-4 col-sm-6">
+                        <div className="col-md-3 col-sm-6">
                             <div className="SkillSection">
                             <SkillSelection/>
                             </div>
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-md-push-1">
+                           
+                        </div>
+                        <div className="col-md-3 col-sm-6 col-md-push-1">
+                            
                         </div>
                     </div>
                 </div>

@@ -1140,7 +1140,7 @@ export default class SkillSelection extends Component {
                         <div className="CatBottom">
                             <div className="CatBtnSubmit">
                                 <button className="left" onClick={(e) => this.showAccordionComp(e)}>OK</button>
-                                <span className="right"><span className="counter"><i>{chosenCount}</i>of 20 Selected</span></span>
+                                <span className="right"><span className="counter"><i>{chosenCount}</i>of 20</span></span>
                             </div>
                         </div>
                     </div>
