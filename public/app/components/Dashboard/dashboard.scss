@@ -250,20 +250,20 @@ margin: 8px 0;
     font-family: Ubuntu-Regular;
 }
 
-.duration-comp{
+.duration-comp {
         position: relative;
         display: inline-block;
+        width: 100%;
+        height: 100%;
 
         & .tags-list {
             position: absolute;
-            bottom: 20px;
-
-            
-
+                    bottom: 0;   
         }
 
         & .tags {
                 float: left;
+                display: inline-block;
 
 
                 input[type="number"] {
@@ -280,7 +280,8 @@ margin: 8px 0;
     
             & .d-counter-box {
                     float: right;  
-                    margin: 0 10px 0 0;              
+                    margin: 0 10px 0 0;  
+                          
 
                 .d-counter {
                    font-family: Ubuntu-Bold;

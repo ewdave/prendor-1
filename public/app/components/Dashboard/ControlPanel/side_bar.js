@@ -6,88 +6,6 @@
 
 export default class SideBar extends Component {
 
-    renderTeam = () => {
-      
-        const team_name = this.props.teamName;
-        const url_team_name = team_name+"_org";
-
-      if(team_name.length > 0){
-          const team_dp = this.props.teamDp;
-
-          return (
-              <div className="side-bar-section team">
-                  <div className="head">
-                      Team
-                  </div>
-                  <div className="s-l-grp create">
-                      <a href="" className="link">Create Team</a>
-                  </div>
-                  <div className="profile">
-        <span>
-          <img src={team_dp} className="display-img"/>
-        </span>
-        <span className="name">
-          {team_name}
-        </span>
-        <span className="edit-btn">
-          <i className="fa fa-pencil"></i>
-        </span>
-                  </div>
-                  <div className="s-l-grp">
-                      <span className="title">Work</span>
-                      <div className="s-l-item">
-                        <Link to={`/work/${url_team_name }/browse/`} activeClassName="active"><i className="check"></i><i className="txt">Browse</i></Link>
-                      </div>
-                      <div className="s-l-item">
-                          <Link to={`/work/${url_team_name }/autobid/`} activeClassName="active"><i className="check"></i><i className="txt">AutoBid </i></Link>
-                      </div>
-                  </div>
-                  <div className="s-l-grp">
-                      <span className="title">Projects</span>
-                      <div className="s-l-item">
-                          <Link to={`/projects/${url_team_name }/startnew/`} activeClassName="active"><i className="check"></i><i className="txt">StartNew </i></Link>
-                      </div>
-                      <div className="s-l-item">
-                          <Link to={`/projects/${url_team_name }/issuedOut/`} activeClassName="active"><i className="check"></i><i className="txt">Issued Out </i></Link>
-                      </div>
-                      <div className="s-l-item">
-                          <Link to={`/projects/${url_team_name }/issuedIn/`} activeClassName="active"><i className="check"></i><i className="txt">Issued In </i></Link>
-                      </div>
-                  </div>
-                  <div className="s-l-grp">
-                      <a href="" className="link">Blog</a>
-                  </div>
-                  <div className="s-l-grp">
-                      <a href="" className="link">Chat</a>
-                  </div>
-
-                    <div className="s-l-grp">
-                      <Link to="/" className="title" activeClassName="active">News</Link>
-                      </div>
-
-                  
-              </div>
-
-          )
-      } else {
-          return (
-              <div className="side-bar-section team">
-                  <div className="head">
-                      Team
-                  </div>
-                  <div className="s-l-grp create">
-                      <a href="" className="link">Create Team</a>
-                  </div>
-
-                  <div className="s-l-grp">
-                      <Link to="/" className="title" activeClassName="active">News</Link>
-                      </div>
-
-              </div>
-          )
-      }
-    }
-
     render(){
 
         const username = this.props.username;
@@ -141,7 +59,6 @@ export default class SideBar extends Component {
 
                     </div>
 
-                    {this.renderTeam()}
 
                      
                 </div>
