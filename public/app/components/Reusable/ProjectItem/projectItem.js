@@ -53,17 +53,9 @@ export default class ProjectItem extends Component {
 
         return (
                 <Link to={`/project-details/${linkParams.pid}/${linkParams.title}`}>
-                    <div className="ProjectItem">
-                        <div className="Proj-i-row">
-                            <div className="title">
-                                <span className="blue">ID</span>
-                            </div>
-                            <div className="body">
-        <span className="normal">
-            {projectID}
-        </span>
-                            </div>
-                        </div>
+                    <div className="ProjectItem-Body">
+
+<div className="ProjectItem">
                         <div className="Proj-i-row">
                             <div className="title">
                                 <span className="blue">Project Title</span>
@@ -117,12 +109,11 @@ export default class ProjectItem extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="Proj-i-row">
-                            <div className="postedBy">
-                                <span className="postedByHover"><span className="blue">posted by ...</span></span>
+                        
+                    </div>
 
-                            </div>
-                        </div>
+                <button className="project-item-bid">Bid</button>
+
                     </div>
                 </Link>
 
