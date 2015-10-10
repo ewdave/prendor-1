@@ -579,6 +579,15 @@ a {
   margin-right: auto;
 }
 
+.showBox .form-box .box-item.danger{
+    background: #ff0008;
+    color: #fff;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 6px;
+}
+
+
 .showBox .form-box .box-item input:-moz-placeholder {
   color: #e6e6e6;
   font-family: Ubuntu-Regular;
@@ -677,6 +686,14 @@ a {
   -ms-transition: all ease-in 0.4s;
   -o-transition: all ease-in 0.4s;
   transition: all ease-in 0.4s;
+}
+
+.showBox .form-box .idx-action-btn img {
+  margin-top: 6px;
+  height: 24px;
+  width: auto;
+  display: inline-block;
+  float: left;
 }
 
 .showBox .form-box .idx-action-btn i .fa {

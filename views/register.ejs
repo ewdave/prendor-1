@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>Login</title>
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"/>
+    <title>Prendor | Register</title>
+      <link href="/vendors/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet"/>
     <link href="/fonts.css" rel="stylesheet" />
     <link href="/welcome-page.css" rel="stylesheet" />
     <link href="/images/favicon.png" rel="shortcut icon">
@@ -14,14 +14,18 @@
 
   <div class="showBox">
     <a href="/">
-      <img alt="Prendor.com" class="logo-icon" src="http://localhost:3000/assets/prendor-3da97e65cce9a2437173201df80b968639adfaa70702aae0541e59e296e90939.png" />
+      <img alt="Prendor.com" class="logo-icon" src="/images/prendor.png" />
      </a>
 
   <form class="form-box" id="new_user" action="/register" accept-charset="UTF-8" method="post">
+  <div id="alert">
+   
+  </div>
+  
   <div class="box-item">
    <span>
-                    <i class="fa fa-envelope"></i>
-     <input autofocus="autofocus" placeholder="Enter Name" type="text" value="" name="email" id="user_email" />
+                    <i class="fa fa-user"></i>
+     <input autofocus="autofocus" placeholder="Enter Name" type="text" value="" name="firstname" id="full_name" />
                       </span>
   </div>
 
@@ -44,18 +48,22 @@
   <div class="box-item">
      <span>
                    <i class="fa fa-lock"></i>
-       <input autocomplete="off" placeholder="Re enter Password" type="password" name="cpass" id="user_password" />
+       <input autocomplete="off" placeholder="Re enter Password" type="password" name="cpass" id="user_password_2" />
                  </span>
 
   </div>
 
+ 
+
    
 
       <div class="idx-action-btn">
+    <img src="images/prendor-loading.gif" id="loading" />
     <input type="submit" name="commit" value="Sign In" />
         <i class="fa fa-caret-right"></i>
   </div>
-</form>    <a class="social-section" href="/login">
+</form>    
+<a class="social-section" href="/login">
       <div>
         <p>Already have an account?</p>
         <p class="link">Login</p>
@@ -64,6 +72,102 @@
     </a>
     </div>
   </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var verifyEmailTaken = function(email,name,password,callback) {
+  $("#loading").show();
+        $.ajax({
+                type: "POST",
+                url: "/api/verifytaken",
+                data: { email: email},
+                dataType: 'html'
+                    
+                    })
+                    .done(function (response) {
+                      console.log(response);
+                        //register user here
+                        response = JSON.parse(response)
+                        if(!response.state) {
+                          callback(email,name,password);
+                        } else {
+                           $("#loading").hide();
+                           $("#alert").html(' <div class="box-item danger">Email Address Taken</div>');
+
+                        }
+                    });
+}
+
+var registerUser = function(email,name,password){
+ $.ajax({
+                type: "POST",
+                url: "/register",
+                data: { email: email,password:password,name:name},
+                dataType: 'html'
+                    
+                    })
+                    .done(function (response) {
+                      response = JSON.parse(response)
+                      console.log(response);
+                        //register user here
+                        console.log(response.status)
+                        if(response.status) {
+                         
+                         window.location.replace("/");
+
+                        } else {
+                           $("#loading").hide();
+            $("#alert").html(' <div class="box-item danger">Sorry Error Occurred Try Again Later</div>');
+
+                        }
+                    });
+}
+
+
+
+    $(document).ready(function () {
+      $("#loading").hide()
+
+        $('#new_user').submit(function (e) {
+          e.preventDefault();
+
+            var full_name = $('#full_name').val();
+            var email = $('#user_email').val();
+            var password = $('#user_password').val();
+            var password2 = $('#user_password_2').val();
+
+            /***
+            if(full_name.length <= 0){
+
+              $("#alert").html(' <div class="box-item danger">Enter Name</div>');
+
+            } else
+
+            */
+            if(email.length <= 0) {
+
+              $("#alert").html(' <div class="box-item danger">Enter Email</div>');
+
+            } else if(password.length <= 0 || password2.length <= 0){
+
+               $("#alert").html(' <div class="box-item danger">Enter Password</div>');
+
+            } else if(password2 != password){
+
+               $("#alert").html(' <div class="box-item danger">Password Do not match</div>');
+            }  else {
+
+              verifyEmailTaken(email,full_name,password2,registerUser);
+            }
+
+         
+
+        });
+
+    });
+
+</script>
 
     </body>
   </head>

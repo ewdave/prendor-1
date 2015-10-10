@@ -8,7 +8,7 @@ var Account = function(){
 
 };
 
-Account.prototype.checkIfUserExist = function(req,res){
+Account.prototype.checkIfUserExist = (req,res) => {
     //moongoose query DB for user
     var userEmail = req.body.email;
 
@@ -28,7 +28,7 @@ Account.prototype.createAccount = function(){
 };
 
 
-Account.prototype.getRegStatus = function(req,res){
+Account.prototype.getRegStatus = (req,res) => {
 
     if(req.isAuthenticated()){
        var email = req.user.email;
@@ -63,7 +63,7 @@ Account.prototype.getRegStatus = function(req,res){
     }
 };
 
-Account.prototype.deleteAccount  = function(req,res){
+Account.prototype.deleteAccount  = (req,res) => {
     var email = req.params.email;
     UserModel.findOneAndRemove({email:email},function(err){
         if(err) console.log(err);
@@ -72,30 +72,6 @@ Account.prototype.deleteAccount  = function(req,res){
 
 };
 
-/**
- * var checkIfAccountTaken = function(req,res){
-
-    //moongoose query DB for user
-    var userEmail = req.body.email;
-
-    UserModel.find({email:userEmail},function(err,users){
-        if(err) res.json({status:false,message:'Sorry there was an error'})
-        if(users){
-            res.json({status:'true',message:'Sorry User Aready Taken'})
-        } else {
-            res.json({status:'true',message:'Usernot taken'})
-        }
-    });
-
-};
-
-
- var createAccount = function(){
-
-}
-
- *
- * **/
 
 
 module.exports = Account;

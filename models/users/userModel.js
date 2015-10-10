@@ -6,6 +6,7 @@ var bcrypt = require("bcrypt-nodejs");
 
 var SkillSchema = require("./skillModel").SkillSchema;
 var UserSchema = new mongoose.Schema({
+
     facebookId:String,
     googleId:String,
     linkedId:String,
@@ -20,6 +21,7 @@ var UserSchema = new mongoose.Schema({
     user_country:String,
     user_website:String,
     user_lang:String,
+    user_email_address:String,
     display_picture:String,
     created_at:{type: Date, default: Date.now},
     encrypted_password:String,

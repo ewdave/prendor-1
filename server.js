@@ -30,8 +30,12 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 require('./config/passport')(passport);
+var auth = require('./config/auth');
+var dbConfig = require('./config/db');
+var account  = new Account();
 
-
+/**
+===========================================NOT USING SOCIAL AUTH IN DEV STAGE ONLY USING IN PROD=======================================
 app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
 // handle the callback after facebook has authenticated the user
@@ -45,6 +49,8 @@ app.get('/auth/google',
     passport.authenticate('google',
         { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
+
+// handle the callback after google has authenticated the user
 app.get('/auth/google/callback',
     passport.authenticate('google',
         {
@@ -52,58 +58,61 @@ app.get('/auth/google/callback',
             failureRedirect: '/'
         }));
 
-function welcome(req, res, next) {
 
-    // if user is authenticated in the session, carry on 
-    if (req.isAuthenticated()){
-        res.render('welcome.ejs')
-    } else {
-        return next();
-    }
-    
-}
 
-function returnHome(req,res,next){
- if (req.isAuthenticated()){
-        res.redirect('/')
-    } else {
-        return next();
-    }
-}
+**/
 
-app.get('/', welcome,(req, res) => {
+
+
+app.get('/', auth.welcome,(req, res) => {
     res.render('index.ejs');
 });
 
 
-app.get('/login',returnHome,(req,res) => {
+app.get('/login',auth.returnHome,(req,res) => {
     res.render('login.ejs')
 });
 
-app.get('/register',returnHome,(req,res) => {
+app.get('/register',auth.returnHome,(req,res) => {
     res.render('register.ejs')
 });
 
 
+app.post('/api/verifytaken',account.checkIfUserExist);
+/*
+app.post('/login', passport.authenticate('local-login', {
+        successRedirect : '/', // redirect to the secure profile section
+        failureRedirect : '/authFail', // redirect back to the signup page if there is an error
+        failureFlash : true // allow flash messages
+}));
 
-app.get('/profile/:id', (req, res) => {
-    res.render('profile.ejs')
-});
+*/
+app.post('/login', passport.authenticate('local-login', {
+        successRedirect : '/regSuccess', // redirect to the secure profile section
+        failureRedirect : '/authFail', // redirect back to the signup page if there is an error
+        failureFlash : true // allow flash messages
+}));
 
-
-
-app.get('/api/getauth', function (req, res) {
-    if (req.isAuthenticated()) {
-        res.json({loggedIn: true, username: req.user.name})
-    } else {
-        res.json({loggedIn: false, username: ""})
-    }
-});
-
-
-app.get('/profile', (req, res)=> {
-    res.json(JSON.stringify(req.user));
+app.get('/authFail',(req,res) => {
+        res.json({status:false,message:"Login/Signup Failed"});
 })
+
+app.get('/regSuccess',(req,res) => {
+        res.json({status:true,message:"Successful"});
+})
+
+
+app.post('/register', passport.authenticate('local-signup', {
+        successRedirect : '/regSuccess', // redirect to the secure profile section
+        failureRedirect : '/authFail', // redirect back to the signup page if there is an error
+        failureFlash : true // allow flash messages
+}));
+
+app.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
 
 
 var server = app.listen(5000, function () {
@@ -116,4 +125,4 @@ var server = app.listen(5000, function () {
 });
 
 
-//mongoose.connect('mongodb://localhost/Prendor');
+mongoose.connect(dbConfig.url);

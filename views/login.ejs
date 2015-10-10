@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Login</title>
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"/>
+      <link href="/vendors/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet"/>
     <link href="/fonts.css" rel="stylesheet" />
     <link href="/welcome-page.css" rel="stylesheet" />
     <link href="/images/favicon.png" rel="shortcut icon">
@@ -14,11 +14,11 @@
 
   <div class="showBox">
   <a href="/">
-      <img alt="Prendor.com" class="logo-icon" src="http://localhost:3000/assets/prendor-3da97e65cce9a2437173201df80b968639adfaa70702aae0541e59e296e90939.png" />
+      <img alt="Prendor.com" class="logo-icon" src="/images/prendor.png" />
      </a>
    
 
-  <form class="form-box" id="new_user" action="/login" accept-charset="UTF-8" method="post">
+  <form class="form-box" id="new_user" method="post">
   <div class="box-item">
    <span>
                     <i class="fa fa-envelope"></i>
@@ -49,6 +49,38 @@
     </a>
     </div>
   </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#new_user').submit(function (e) {
+          e.preventDefault();
+
+            var email = $('#user_email').val();
+            var password = $('#user_password').val();
+
+            $.ajax({
+                type: "POST",
+                url: "/login",
+                data: { email: email , password: password },
+                dataType: 'html'
+            })
+                    .done(function (response) {
+                      response = JSON.parse(response);
+                      if(response.status){
+                         window.location.replace("/");
+                      } else {
+                        console.log(response)
+                      }
+
+                    });
+
+        });
+
+    });
+
+</script>
 
     </body>
   </head>
