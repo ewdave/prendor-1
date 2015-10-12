@@ -4,7 +4,7 @@
 var mongoose = require("mongoose");
 var bcrypt = require("bcrypt-nodejs");
 
-var SkillSchema = require("./skillModel").SkillSchema;
+var SkillSchema = require("./../skillModel").SkillSchema;
 var UserSchema = new mongoose.Schema({
 
     facebookId:String,
