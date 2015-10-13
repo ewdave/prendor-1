@@ -612,22 +612,21 @@ export default class BrowseWork extends Component {
                 </div>
 
                 <div className="BySkill">
-                    <GeminiScrollbar className='BySkill'>
-                        <div className="full start-left">
+                    <div className="full start-left">
 
-                            <ReactCSSTransitionGroup transitionAppear={true} transitionName="project">
-                                {
-                                    pObj.map((content, index)=> {
-                                        return (
-                                            <div className="col-md-3 col-xs-9 col-sm-4" key={index}>
-                                                <ProjectItem projectObj={content}/>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </ReactCSSTransitionGroup>
-                        </div>
-                    </GeminiScrollbar>
+                        <ReactCSSTransitionGroup transitionAppear={true} transitionName="project">
+                            {
+                                pObj.map((content, index)=> {
+                                    return (
+                                        <div className="col-md-3 col-xs-9 col-sm-4" key={index}>
+                                            <ProjectItem projectObj={content}/>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </ReactCSSTransitionGroup>
+                    </div>
+
                 </div>
 
 

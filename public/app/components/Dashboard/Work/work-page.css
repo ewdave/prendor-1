@@ -1,4 +1,5 @@
 .BidPlatform {
+    position: relative;
     height: 505px;
     width: 100%;
 }
@@ -7,8 +8,6 @@
 .SearchActivity {
     display: inline-block;
     background-color: #f7f7f7;
-    width: 100%;
-    height: auto;
 
 }
 
