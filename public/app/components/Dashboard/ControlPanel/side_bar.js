@@ -3,6 +3,7 @@
  */
  import React,{findDomNode,Component,PropTypes} from 'react';
  import {Link} from 'react-router';
+ require('./sidebar.scss');
 
 export default class SideBar extends Component {
 
@@ -51,19 +52,19 @@ export default class SideBar extends Component {
                             </div>
                         </div>
                         <div className="s-l-grp">
-                            <a href="" className="link">Blog</a>
+                            <a href="" className="title">Blog</a>
                         </div>
                         <div className="s-l-grp">
-                            <a href="" className="link">Payment</a>
+                            <a href="" className="title">Payment</a>
                         </div>
                         <div className="s-l-grp">
-                            <a href="" className="link">Chat</a>
+                            <a href="" className="title">Chat</a>
                         </div>
                         <div className="s-l-grp">
-                            <a href="" className="link">Todos</a>
+                            <a href="" className="title">Todos</a>
                         </div>
                         <div className="s-l-grp">
-                            <a href="" className="link">Tasks</a>
+                            <a href="" className="title">Tasks</a>
                         </div>
 
                     </div>

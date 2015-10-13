@@ -27,6 +27,9 @@ a:hover {
   color: $idx-whitish;
   font-weight: 600;
   z-index: 300;
+  position: fixed;
+  top: 0;
+  
 
   & .header-right-nav {
       list-style: none;

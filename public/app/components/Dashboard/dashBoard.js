@@ -7,7 +7,7 @@ require('./../css/boot.css');
 require('./../css/constants.scss');
 require('./../css/shared.scss');
 
-import ControlPanel from './ControlPanel/controlPanel';
+import  SideBar  from './ControlPanel/side_bar';
 import Header from './Header/header';
 
 export default class DashBoard extends Component {
@@ -21,7 +21,8 @@ export default class DashBoard extends Component {
 
                 <div className="MainBodySection">
                     <div className="full">
-                      <ControlPanel/>
+                        <SideBar   userDp="/images/imageicon.png"
+                                   username="Xtterix"/>
                         
                         <div className="col-md-10 col-sm-12">
                             <div className="MainMiddleMonitor">
