@@ -29,7 +29,11 @@ a:hover {
   z-index: 300;
   position: fixed;
   top: 0;
-  
+
+  &::after {
+    position: absolute;
+    height: 100px;
+  }
 
   & .header-right-nav {
       list-style: none;
