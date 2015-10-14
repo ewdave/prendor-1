@@ -3,7 +3,7 @@
  */
 import React,{Component,PropTypes} from 'react/addons';
 import ModalHeader from './modalheader';
-require('./modal.css');
+require('./modal.scss');
 
 
 
@@ -59,10 +59,9 @@ export default class Modal extends Component {
 
 
 Modal.propTypes = {
-    showModal:PropTypes.func,
     open:PropTypes.bool,
     closeModal:PropTypes.func,
     modalSize:PropTypes.number
 };
 
-Modal.defaultProps = {open:false}
+Modal.defaultProps = {open:false};

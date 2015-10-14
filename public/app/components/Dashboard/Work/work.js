@@ -3,7 +3,7 @@
  */
 
 import React,{findDomNode,Component,PropTypes} from 'react';
-require('./work-page.css');
+require('./work-page.scss');
 require("./../../../../../node_modules/react-gemini-scrollbar/node_modules/gemini-scrollbar/gemini-scrollbar.css");
 
 

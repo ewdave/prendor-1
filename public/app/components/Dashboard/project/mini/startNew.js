@@ -125,14 +125,8 @@ export default class ProjectStartNew extends Component {
                     <div className="col-md-4 col-sm-4 col-xs-9 col-md-push-1 col-sm-push-1">
                         <div className="full">
                             <div className="col-md-11 col-sm-12">
-                                <div className="FormBox attach">
-                                    <div className="head">
-                                        <i className="fa fa-paperclip"></i>
-                                        <span>Attachments</span><span className="blue">20</span> files
-                                    </div>
 
-                                    {<UploadBox uploadUrl="/uploads/images"/>}
-                                </div>
+                                {<UploadBox uploadUrl="/uploads/images"/>}
 
                             </div>
                         </div>

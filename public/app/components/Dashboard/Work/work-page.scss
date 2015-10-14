@@ -1,3 +1,4 @@
+@import './../../css/constants.scss';
 .BidPlatform {
     position: relative;
     height: 505px;
@@ -7,7 +8,7 @@
 
 .SearchActivity {
     display: inline-block;
-    background-color: #f7f7f7;
+    background-color: $body-bag;
 
 }
 
@@ -26,7 +27,7 @@
 .Inline-form .title {
     margin-bottom: 3px;
     display: block;
-    color: #1690a2;
+    color: $our_blue;
     font-family: Ubuntu-Bold;
     
 }
@@ -47,7 +48,7 @@
 .locale-search span {
     display: inline-block;
     margin: 0 3px;
-    color: #1690a2;
+    color: $our_blue;
 }
 
 .locale-search .fa {
@@ -86,7 +87,7 @@
 
     .SearchActivity {
         display: inline-block;
-        background-color: #f7f7f7;
+        background-color: $body-bag;
         width: 100%;
         height: auto;
 
@@ -110,15 +111,15 @@
 
 
 .BySkill .gm-scrollbar.-vertical {
-    background-color: #e2e2e2;
+    background-color: $scroll-bg;
 }
 
 .BySkill .gm-scrollbar.-vertical .thumb {
-    background-color: #1690a2;
+    background-color: $our_blue;
 }
 
 .BySkill .gm-scrollbar .thumb:hover {
-    background-color: #1690a2;
+    background-color: $our_blue;
 }
 
 

@@ -7,12 +7,12 @@ export default class ModalHeader extends Component {
 
     render(){
         const icon = this.props.icon;
-        const text = this.props.text;
         return (
             <div className="top-bar">
                 <div className="modal-icon">
                     <img src={icon}/></div>
-                    <div className="modal-title">{text}
+                    <div className="modal-title">
+                        {this.props.children}
                     </div>
                     <div className="modal-close"><button className="fBtn" onClick={() => this.props.closeModal()}>
                         <i className="fa fa-close"></i></button>
@@ -25,7 +25,10 @@ export default class ModalHeader extends Component {
 
 ModalHeader.propTypes = {
     icon:PropTypes.string,
-    text:PropTypes.string.isRequired,
     closeModal:PropTypes.func
+}
+
+ModalHeader.defaultProps = {
+    icon: "/images/prendoricon.png"
 }
 
