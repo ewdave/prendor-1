@@ -14,8 +14,9 @@ export default class ModalHeader extends Component {
                     <div className="modal-title">
                         {this.props.children}
                     </div>
-                    <div className="modal-close"><button className="fBtn" onClick={() => this.props.closeModal()}>
-                        <i className="fa fa-close"></i></button>
+                    <div className="modal-close">
+                        <button className="fBtn" onClick={() => this.props.closeModal()}>
+                        X</button>
                     </div>
 
                 </div>

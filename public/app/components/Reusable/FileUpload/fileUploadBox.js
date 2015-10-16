@@ -12,7 +12,7 @@ require('./file-box.scss');
 export default class UploadBox extends Component {
     constructor() {
         super();
-        this.state = {count: 0, showModal: false, files: []}
+        this.state = {count: 0, showModal: true, files: [],showList:false};
         this.closeModal = this.closeModal.bind(this);
         this.showModal = this.showModal.bind(this);
     }
@@ -22,38 +22,54 @@ export default class UploadBox extends Component {
 
         files.map((file)=> {
             const indexOf = oldFiles.indexOf(file) > -1;
-            if(!indexOf){
+
                 oldFiles.push(file)
-            } else {
-                console.log('contains file')
-            }
+
         })
-       this.setState({files: oldFiles});
+        const count = oldFiles.length;
+       this.setState({files: oldFiles,count:count});
 
-    }
+    };
 
-
+    upload = (index) => {
+        console.log("Upload file"+index+" to SERVER HERE");
+    };
+    remove = (index) => {
+        console.log("remove  file"+index+" from upload list");
+    };
 
     closeModal() {
-        this.setState({showModal: false});
+        this.setState({showModal: false,showList:true});
     }
 
     showModal() {
         this.setState({showModal: true});
     }
 
-
     render() {
         const files = this.state.files;
         const count = this.state.count;
         const showModal = this.state.showModal;
+        const showList = this.state.showList;
+        let fileTiles;
+        if(showList){
+            fileTiles = files.map((content)=> {
+                return (<div className="file-tile">
+                    {content.name} <br/>
+                    {content.size}
+                </div>)
+            });
+        } else {
+            fileTiles = "";
+        }
         let shouldAdd;
         if (count > 0) {
-            shouldAdd = <span className="blue">20  files</span>;
-        } else {
-            shouldAdd = <div className="action">
+            shouldAdd = <div className="action"><span className="blue">{count} files</span>
+                                <button className="btn" onClick={this.showModal}>+</button>
+                        </div>
+        } else { shouldAdd = <div className="action">
                 <button className="btn" onClick={this.showModal}>+</button>
-            </div>;
+            </div>
         }
         return (
             <div className="FormBox attach">
@@ -63,7 +79,9 @@ export default class UploadBox extends Component {
                 </div>
                 <div className="attach-list">
                     <GeminiScrollbar>
-
+                        <div className="file-tiles">
+                            { fileTiles }
+                        </div>
                     </GeminiScrollbar>
                 </div>
                 <Modal open={showModal} closeModal={this.closeModal}>
@@ -72,15 +90,23 @@ export default class UploadBox extends Component {
                     </ModalHeader>
 
                     <div className="body">
-                        <Dropzone onDrop={this.drop} className="dropBox">
-                            +
-                        </Dropzone>
+
                         <div className="attach-list preview">
+
                             <GeminiScrollbar>
+                                <Dropzone onDrop={this.drop} className="dropBox">
+                                    <span> +</span>
+                                    <div>Drag & Drop Files</div>
+                                </Dropzone>
                                     {
                                         files.map((content, index)=> {
-                                            return <UploadItem key={content.name}
+                                            return <UploadItem
+                                                            key={content.name}
+                                                            index={index}
+                                                            upload={this.upload}
+                                                            remove={this.remove}
                                                             previewUrl={content.preview}
+                                                            fileSize={content.size}
                                                             fileType={content.type}
                                                             fileName={content.name}/>
 

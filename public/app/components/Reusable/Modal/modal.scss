@@ -1,3 +1,4 @@
+@import "./../../css/constants";
 .overlay {
     position: fixed;
     left: 0;
@@ -43,8 +44,7 @@
 
 }
 .modal {
-    background: #f7f7f7;
-    padding: 2px;
+    background: $body-bag;
     width: 100%;
     height: auto;
     display: inline-block;
@@ -53,22 +53,30 @@
 }
 
 .modal > .top-bar {
-    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 0.25));
-    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 0.25));
-    background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 0.25));
+
+    box-shadow: inset 0 3px 1px 0 #ffffff;
+    background: -webkit-linear-gradient(90deg,rgba(255,255,255,0.25),rgba(0, 0, 0, 0.14));
+    background: -moz-linear-gradient(90deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.14));
+    background: -o-linear-gradient(90deg,rgba(255,255,255,0.25), rgba(0, 0, 0, 0.14));
     font-family: Ubuntu-Bold;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     width: 100%;
     height: auto;
     display: inline-block;
+    color: #fff;
+
+    padding: 10px 0;
+
+    & .modal-title {
+        margin: 0 5px;
+    }
 
 }
 
 .modal > .body {
     height: auto;
     width: 100%;
-    margin: 2px 2px;
     display: inline-block;
 }
 
@@ -83,7 +91,28 @@
     float: left;
     display: block;
     padding-top: 3px;
+
 }
+
+.fBtn {
+    font-family: Ubuntu-Bold;
+    border: none;
+    border-radius: 50%;
+    color: $our_blue;
+    box-shadow: inset 0 -1px 1px 0 #ffffff;
+    background: $body-bag;
+    cursor:pointer;
+    padding: 6px 9px;
+}
+
+
+
+
+.fBtn .fa {
+    padding: 0 0;
+    margin: 0 0;
+}
+
 
 .modal-icon img {
     height: 25px;
@@ -103,12 +132,11 @@
 .modal-close {
     float: right;
     display: inline-block;
+    margin-right: 10px;
+    color: $our_blue;
 
 }
 
-.modal-close .fa {
-    color: #e80000;
-}
 
 .login-item {
     display: inline-block;
