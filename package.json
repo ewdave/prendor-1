@@ -36,6 +36,7 @@
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.3",
     "react": "^0.13.3",
+    "react-sidebar":"^1.1.0",
     "react-dropzone": "^2.2.0",
     "react-gemini-scrollbar": "^1.1.1",
     "react-hot-loader": "^1.2.7",

@@ -11,6 +11,7 @@ var session = require('express-session');
 var Account = require("./controllers/account");
 var passport = require("passport");
 var path = require("path");
+var multer = require('multer');
 var app = express();
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -30,6 +31,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 require('./config/passport')(passport);
+require('./config/multer')(app,multer);
 var auth = require('./config/auth');
 var dbConfig = require('./config/db');
 var account  = new Account();
@@ -108,6 +110,9 @@ app.post('/register', passport.authenticate('local-signup', {
         failureFlash : true // allow flash messages
 }));
 
+app.get('/upload',(req,res)=>{
+    res.render('fileUploadTest.ejs')
+})
 app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
