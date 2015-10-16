@@ -39,11 +39,12 @@
     & span {
       display: inline-block;
       border-radius: 50%;
-      padding: 3px 13px;
       background: rgba(0, 0, 0, 0.14);
       margin: 15% 0;
       color: #ff8000;
       font-size: 32px;
+      text-align: center;
+      padding: 0 10px;
     }
 
     & div {
@@ -70,6 +71,7 @@
       float: left;
       padding: 8px 18px;
       margin: 3px 3px;
+      border-bottom-right-radius: 6px;
 
     }
   }
@@ -85,8 +87,6 @@
 .attach-item{
   display: inline-block;
   margin: 6px;
-
-
 }
 
 
@@ -165,10 +165,13 @@
   padding: 1px 1px;
   display: inline-block;
 }
-.action  .btn {
+.btn {
   font-family: Ubuntu-Bold;
-  font-size: 17px;
-  padding: 0 8px;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  height: 23px;
+  width: 23px;
   border: none;
   border-radius: 50%;
   color: $our_blue;
@@ -180,7 +183,7 @@
   margin: 0 5px;
 }
 
-.action > .btn:focus {
+.btn:focus {
 
   box-shadow: 0 -1px 1px 0 #ffffff;
   background: -webkit-linear-gradient(90deg,rgba(255,255,255,0.25),rgba(0, 0, 0, 0.14));
@@ -211,12 +214,22 @@
   margin: 4px;
 
   & .preview {
-    height: auto;
-    width: auto;
+    height: 120px;
+    width: 180px;
     padding: 2px;
     display: block;
     background: $b-btm-color;
     position: relative;
+
+    & .fileType {
+      font-style: normal;
+      font-size: 20px;
+      vertical-align: middle;
+      color: $our_black;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     &:hover .actions {
       display: inline-block;
@@ -232,9 +245,10 @@
       color: #fff;
       font-family: Ubuntu-Bold;
 
-      & .upload{
+      & .remove{
         cursor: pointer;
-        padding: 2px 0;
+        padding: 5px 0;
+        display: inline-block;
           & .fa {
             display: inline-block;
             color: $our_orange;
@@ -244,19 +258,13 @@
           }
       }
 
-      & .remove{
-          cursor: pointer;
-          border-left: 1px solid #fff;
-          float: right;
-          font-size: 20px;
-          padding: 0 8px;
-      }
+
     }
 
     & img {
       display: inline-block;
       height: 120px;
-      width: auto;
+      width: 180px;
     }
   }
   
@@ -283,6 +291,17 @@
   }
 
 
+}
+
+.upload-list {
+  display: inline-block;
+  width: 100%;
+  padding: 2px 3px 2px 0;
+  & button {
+    float: right;
+    margin-right: 8px;
+    display: inline-block;
+  }
 }
 
 

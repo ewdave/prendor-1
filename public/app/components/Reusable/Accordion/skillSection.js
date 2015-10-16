@@ -362,7 +362,7 @@ const skillList = [
             }, {"item": "Database Programming", "checked": false}, {"item": "DDS", "checked": false}, {
                 "item": "Debian",
                 "checked": false
-            }, {"item": "Debugging", "checked": false}, {"item": "Delphi", "checked": false},
+            }, {"item": "Debugging", "checked": false}, {"item": "Delphi", "checked": false}
             , {"item": "Game Consoles", "checked": false}, {
                 "item": "Game Design",
                 "checked": false

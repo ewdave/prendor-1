@@ -15,6 +15,28 @@ export default class UploadBox extends Component {
         this.state = {count: 0, showModal: true, files: [],showList:false};
         this.closeModal = this.closeModal.bind(this);
         this.showModal = this.showModal.bind(this);
+        this.removeAll = this.removeAll.bind(this)
+    }
+
+    generateFillType(fileName){
+
+        let index = fileName.lastIndexOf(".");
+        return fileName.substring((index + 1),fileName.length);
+    }
+
+    getFileName(fileName){
+        let length = fileName.length;
+
+        if(length <= 14){
+            return fileName
+        } else {
+            let index = fileName.indexOf(".");
+            let ext = this.generateFillType(fileName);
+            let name = fileName.substring(0,9);
+
+            return name+"...."+ext;
+        }
+
     }
 
     drop = (files) => {
@@ -31,11 +53,14 @@ export default class UploadBox extends Component {
 
     };
 
-    upload = (index) => {
-        console.log("Upload file"+index+" to SERVER HERE");
-    };
     remove = (index) => {
-        console.log("remove  file"+index+" from upload list");
+       let files  = this.state.files;
+        files.splice(index,1);
+        this.setState({files:files});
+    };
+
+    removeAll() {
+        this.setState({files:[],count:0});
     };
 
     closeModal() {
@@ -54,8 +79,8 @@ export default class UploadBox extends Component {
         let fileTiles;
         if(showList){
             fileTiles = files.map((content)=> {
-                return (<div className="file-tile">
-                    {content.name} <br/>
+                return (<div className="file-tile" key={content.preview}>
+                    {this.getFileName(content.name)} <br/>
                     {content.size}
                 </div>)
             });
@@ -86,7 +111,7 @@ export default class UploadBox extends Component {
                 </div>
                 <Modal open={showModal} closeModal={this.closeModal}>
                     <ModalHeader>
-                        Drag and Drop Multiple Files
+                        File Manager
                     </ModalHeader>
 
                     <div className="body">
@@ -103,7 +128,6 @@ export default class UploadBox extends Component {
                                             return <UploadItem
                                                             key={content.name}
                                                             index={index}
-                                                            upload={this.upload}
                                                             remove={this.remove}
                                                             previewUrl={content.preview}
                                                             fileSize={content.size}
@@ -113,8 +137,13 @@ export default class UploadBox extends Component {
                                         })
                                     }
                             </GeminiScrollbar>
-                        </div>
 
+                        </div>
+                        <div className="upload-list">
+                            <button className="Button" onClick={this.closeModal}>Ok</button>
+                            <button className="Button" onClick={this.removeAll}>Remove All</button>
+                            <button className="Button" >Upload All</button>
+                        </div>
                     </div>
                 </Modal>
             </div>
