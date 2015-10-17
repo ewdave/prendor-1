@@ -7,6 +7,7 @@ import Modal from './../Modal/modal';
 import ModalHeader from './../Modal/modalheader';
 import Dropzone from 'react-dropzone';
 import UploadItem from './uploadItem';
+import axios from 'axios';
 require('./file-box.scss');
 
 export default class UploadBox extends Component {
@@ -15,7 +16,9 @@ export default class UploadBox extends Component {
         this.state = {count: 0, showModal: true, files: [],showList:false};
         this.closeModal = this.closeModal.bind(this);
         this.showModal = this.showModal.bind(this);
-        this.removeAll = this.removeAll.bind(this)
+        this.removeAll = this.removeAll.bind(this);
+        this.uploadAll =  this.uploadAll.bind(this);
+        this.deleteAll =  this.deleteAll.bind(this);
     }
 
     generateFillType(fileName){
@@ -45,7 +48,7 @@ export default class UploadBox extends Component {
         files.map((file)=> {
             const indexOf = oldFiles.indexOf(file) > -1;
 
-                oldFiles.push(file)
+                oldFiles.push({file:file,state:-1})
 
         })
         const count = oldFiles.length;
@@ -71,6 +74,45 @@ export default class UploadBox extends Component {
         this.setState({showModal: true});
     }
 
+    uploadAll(){
+        const self = this;
+        let files = this.state.files;
+        let formData = new FormData;
+        files.map((content)=>{
+            content.state = 0;
+            formData.append('files',content.file);
+        });
+   /*     var opts = {
+    transformRequest: function(data) { return data; }
+    };
+
+    axios.post('/fileupload', data, opts);
+   *
+   * **/
+        console.log(this)
+        axios.post('/api/upload', formData)
+            .then((response)=>{
+
+                if(response.data.status) {
+                    console.log('its true')
+                    files.map((content)=>{
+                        content.state = 1;
+                    });
+                   self.setState({files:files});
+                    console.log(self)
+                }
+            console.log(response.data.status)
+            })
+            .catch((response)=>{
+                console.log(response)
+            })
+        this.setState({files:files});
+
+    }
+    deleteAll(){
+
+    }
+
     render() {
         const files = this.state.files;
         const count = this.state.count;
@@ -80,7 +122,7 @@ export default class UploadBox extends Component {
         if(showList){
             fileTiles = files.map((content)=> {
                 return (<div className="file-tile" key={content.preview}>
-                    {this.getFileName(content.name)} <br/>
+                    {this.getFileName(content.file.name)} <br/>
                     {content.size}
                 </div>)
             });
@@ -126,13 +168,14 @@ export default class UploadBox extends Component {
                                     {
                                         files.map((content, index)=> {
                                             return <UploadItem
-                                                            key={content.name}
+                                                            key={content.file.name}
                                                             index={index}
                                                             remove={this.remove}
-                                                            previewUrl={content.preview}
-                                                            fileSize={content.size}
-                                                            fileType={content.type}
-                                                            fileName={content.name}/>
+                                                            previewUrl={content.file.preview}
+                                                            fileSize={content.file.size}
+                                                            fileType={content.file.type}
+                                                            fileName={content.file.name}
+                                                            state={content.state}/>
 
                                         })
                                     }
@@ -142,7 +185,7 @@ export default class UploadBox extends Component {
                         <div className="upload-list">
                             <button className="Button" onClick={this.closeModal}>Ok</button>
                             <button className="Button" onClick={this.removeAll}>Remove All</button>
-                            <button className="Button" >Upload All</button>
+                            <button className="Button" onClick={this.uploadAll}>Upload All</button>
                         </div>
                     </div>
                 </Modal>
@@ -155,9 +198,8 @@ export default class UploadBox extends Component {
 
 
 /*
- * FileObject
- * filename:"",
- * state:none/loading/failed,
- * response:""
+ * states { pos => loading | finished ,files => {files,state:uploaded | failed} }
+ * funcs {uploadAll, removeAll, deleteAll, removeOne, deleteOne, completeAll,getFilesUrl}
+ *
  *
  * **/

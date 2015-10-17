@@ -23,7 +23,6 @@ export default class UploadItem extends Component {
        if(length <= 14){
            return fileName
        } else {
-           let index = fileName.indexOf(".");
            let ext = this.generateFillType(fileName);
            let name = fileName.substring(0,9);
 
@@ -32,24 +31,49 @@ export default class UploadItem extends Component {
 
     }
 
-    render(){
-        const fileType = this.props.fileType;
-        const previewUrl = this.props.previewUrl;
-        const fileName = this.props.fileName;
-        const fileSize = this.props.fileSize;
-
-        let previewElement;
-
+    renderPreview(fileType,previewUrl){
+        let prevElem;
         switch (fileType){
-            case 'image/jpeg' || 'image/jpg' || 'image/JPEG' || 'image/png' || 'image/PNG' || 'image/gif' || 'image/GIF' || 'image/bmp' || 'image/BMP':
-             previewElement = <img src={previewUrl} />
+            case 'jpeg' || 'jpg' || 'JPEG':
+                console.log('here')
+                prevElem = <img src={previewUrl} />
                 break;
-
+            case 'jpg' || 'JPEG':
+                console.log('here');
+                prevElem = <img src={previewUrl} />
+                break;
+            case 'png' || 'PNG':
+                prevElem = <img src={previewUrl} />
+                break;
+            case  'gif' || 'GIF':
+                prevElem = <img src={previewUrl} />
+                break;
+            case  'bmp' || 'BMP':
+                prevElem = <img src={previewUrl} />
+                break;
             default :
-               previewElement = <i className="fileType">{this.generateFillType(fileName)}</i>
+                prevElem = <i className="fileType">{fileType}</i>
                 break;
         }
 
+        return prevElem;
+
+    }
+
+    render(){
+
+        const previewUrl = this.props.previewUrl;
+        const fileName = this.props.fileName;
+        const fileSize = this.props.fileSize;
+        const fileType = this.generateFillType(fileName);
+        const state = this.props.state;
+        let previewElement;
+
+        if(state == 0){
+            previewElement = <img src="/images/prendor-loading.gif" className="loading" />
+        } else {
+            previewElement = this.renderPreview(fileType,previewUrl);
+        }
         return (
             <div className="previewBox">
 		<span className="preview">
@@ -67,7 +91,7 @@ export default class UploadItem extends Component {
             <span className="file-name">
                 {this. getFileName(fileName)}
             </span>
-            <span className="file-size">{fileSize}</span>
+            <span className="file-size">{fileSize/1000000} MB</span>
 		</div>
             </div>
         )
@@ -80,5 +104,6 @@ UploadItem.propTypes = {
     fileType:PropTypes.string.isRequired,
     fileName:PropTypes.string.isRequired,
     fileSize:PropTypes.number.isRequired,
-    remove:PropTypes.func.isRequired
+    remove:PropTypes.func.isRequired,
+    state:PropTypes.number.isRequired
 }

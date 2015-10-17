@@ -265,7 +265,19 @@
       display: inline-block;
       height: 120px;
       width: 180px;
+
+      &.loading {
+        height: 50px;
+        width: auto;
+        display: block;
+        margin-left: 30%;
+        margin-right: 25%;
+        margin-top: 20%;
+      }
+
     }
+
+
   }
   
   & .file-details {
