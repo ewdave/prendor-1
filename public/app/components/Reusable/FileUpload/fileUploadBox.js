@@ -13,7 +13,7 @@ require('./file-box.scss');
 export default class UploadBox extends Component {
     constructor() {
         super();
-        this.state = {count: 0, showModal: true, files: [],showList:false};
+        this.state = {count: 0, showModal: false, files: [],showList:false,loading:false};
         this.closeModal = this.closeModal.bind(this);
         this.showModal = this.showModal.bind(this);
         this.removeAll = this.removeAll.bind(this);
@@ -67,7 +67,20 @@ export default class UploadBox extends Component {
     };
 
     closeModal() {
-        this.setState({showModal: false,showList:true});
+        let loading = this.state.loading;
+        if(loading){
+            alert('File Upload Still in Progress')
+        } else {
+            let urls = [];
+            const files = this.state.files;
+           files.map((content)=>{
+                if(content.state == 1){
+                    urls.push("tmp/uploads/"+content.file.name);
+                }
+            });
+            this.props.getFiles(urls);
+            this.setState({showModal: false,showList:true});
+        }
     }
 
     showModal() {
@@ -82,6 +95,7 @@ export default class UploadBox extends Component {
             content.state = 0;
             formData.append('files',content.file);
         });
+
    /*     var opts = {
     transformRequest: function(data) { return data; }
     };
@@ -89,24 +103,27 @@ export default class UploadBox extends Component {
     axios.post('/fileupload', data, opts);
    *
    * **/
-        console.log(this)
-        axios.post('/api/upload', formData)
-            .then((response)=>{
+
+        console.log(this);
+        const uploadUrl = this.props.uploadUrl;
+        axios.post(uploadUrl, formData)
+       .then((response)=>{
 
                 if(response.data.status) {
                     console.log('its true')
                     files.map((content)=>{
                         content.state = 1;
                     });
-                   self.setState({files:files});
+                   self.setState({files:files,loading:false});
                     console.log(self)
                 }
             console.log(response.data.status)
             })
-            .catch((response)=>{
+       .catch((response)=>{
                 console.log(response)
             })
-        this.setState({files:files});
+
+         this.setState({files:files,loading:true});
 
     }
     deleteAll(){
@@ -203,3 +220,8 @@ export default class UploadBox extends Component {
  *
  *
  * **/
+
+UploadBox.propTypes = {
+    getFiles:PropTypes.func.isRequired,
+    uploadUrl:PropTypes.string.isRequired
+}

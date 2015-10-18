@@ -68,15 +68,22 @@ export default class UploadItem extends Component {
         const fileType = this.generateFillType(fileName);
         const state = this.props.state;
         let previewElement;
-
+        let prevClass;
         if(state == 0){
-            previewElement = <img src="/images/prendor-loading.gif" className="loading" />
+            prevClass = "preview loading";
+            previewElement = <div>
+                        {this.renderPreview(fileType,previewUrl)}
+                        <div className="loading">
+                            <img src="/images/prendor-loading.gif"/>
+                        </div>
+                             </div>
         } else {
+            prevClass = "preview";
             previewElement = this.renderPreview(fileType,previewUrl);
         }
         return (
             <div className="previewBox">
-		<span className="preview">
+		<span className={prevClass}>
             {previewElement}
             <div className="actions">
                 <span className="remove" onClick={this.remove.bind(this)}>

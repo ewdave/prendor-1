@@ -15,7 +15,11 @@
       float: left;
     }
     & .action {
-      margin-top: -5px;
+      margin-top: -2px;
+
+      & .btn {
+        margin-top: -2px;
+      }
     }
     i {
       display: inline-block;
@@ -35,12 +39,13 @@
   text-align: center;
   display: inline-block;
   float: left;
-  min-width: 250px;
+  width: 250px;
+  height: 137px;
     & span {
       display: inline-block;
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.14);
-      margin: 15% 0;
+      margin: 6% 0;
       color: #ff8000;
       font-size: 32px;
       text-align: center;
@@ -58,7 +63,6 @@
   background: #fcfcfc;
   height: 170px;
   border:none;
-  box-shadow: inset 1px 1px 1px -1px $b-btm-color;
 
   & .file-tiles{
     display: inline-block;
@@ -67,7 +71,7 @@
       display: inline-block;
       color: $our_black;
       border-right:1px solid #FFFFFF;
-      box-shadow: 0 0 0 1px #dddddd;
+      box-shadow: 1px 1px 0 1px #dddddd;
       float: left;
       padding: 8px 18px;
       margin: 3px 3px;
@@ -81,7 +85,8 @@
 
 .attach-list.preview {
   height: 380px;
-  background: $body-bag;
+  background: $bg-dark;
+  margin: 0 0 5px 0;
 }
 
 .attach-item{
@@ -214,12 +219,13 @@
   margin: 4px;
 
   & .preview {
-    height: 120px;
-    width: 180px;
+    height: 137px;
+    width: 170px;
     padding: 2px;
     display: block;
     background: $b-btm-color;
     position: relative;
+
 
     & .fileType {
       font-style: normal;
@@ -227,8 +233,9 @@
       vertical-align: middle;
       color: $our_black;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 30%;
+      margin-right: 25%;
+      margin-top: 20%;
     }
 
     &:hover .actions {
@@ -263,18 +270,32 @@
 
     & img {
       display: inline-block;
-      height: 120px;
-      width: 180px;
+      height: 137px;
+      width: 170px;
 
-      &.loading {
-        height: 50px;
-        width: auto;
-        display: block;
+
+
+    }
+
+    &.loading:hover .actions {
+      display: none;
+    }
+
+    & .loading {
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+
+      & img {
         margin-left: 30%;
         margin-right: 25%;
         margin-top: 20%;
+        height: 50px;
+        width: auto;
       }
-
     }
 
 
@@ -308,7 +329,7 @@
 .upload-list {
   display: inline-block;
   width: 100%;
-  padding: 2px 3px 2px 0;
+  padding: 5px 3px 5px 0;
   & button {
     float: right;
     margin-right: 8px;

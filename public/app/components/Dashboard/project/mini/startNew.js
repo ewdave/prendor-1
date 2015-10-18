@@ -12,8 +12,16 @@ import SkillSelection from './../../../Reusable/Accordion/skillSection';
 export default class ProjectStartNew extends Component {
     constructor() {
         super();
-        this.state = {skills: [], dateTime: {mnths: 0, wks: 0, days: 0}, desc: "Clear To Enter Description"}
+        this.state = {skills: [],
+            dateTime: {mnths: 0, wks: 0, days: 0},
+            desc: "Clear To Enter Description",
+            urls:[]
+        }
 
+    }
+
+    getFiles = (files)  =>{
+        this.setState({urls:files})
     }
 
     getInputs = () => {
@@ -29,6 +37,7 @@ export default class ProjectStartNew extends Component {
         const priceDur = React.findDOMNode(this.refs.priceDur).value;
         const priceHr = React.findDOMNode(this.refs.priceHr).value;
         const skills = this.state.skills;
+        const urls = this.state.urls;
 
 
         console.log({
@@ -40,11 +49,12 @@ export default class ProjectStartNew extends Component {
             priceDur: priceDur,
             priceHr: priceHr,
             skills: skills,
-            desc: desc
+            desc: desc,
+            urls:urls
         })
     }
 
-    getSkill(array) {
+    getSkill = (array) =>{
         this.setState({skills: array})
     }
 
@@ -91,7 +101,7 @@ export default class ProjectStartNew extends Component {
                         </div>
                         <div className="full">
                             <div className="col-md-8">
-                                <SkillSelection selectChange={() => this.getSkill}/>
+                                <SkillSelection selectChange={this.getSkill}/>
                             </div>
 
                         </div>
@@ -111,7 +121,11 @@ export default class ProjectStartNew extends Component {
                                     Description
                                 </div>
                                 <div>
-                                    <ReactQuill value={this.state.desc} theme="snow" onChange={this.getDescription}/>
+                                    <ReactQuill
+                                        value={this.state.desc}
+                                        theme="snow"
+                                        onChange={this.getDescription}
+                                        />
                                 </div>
                             </div>
 
@@ -126,7 +140,10 @@ export default class ProjectStartNew extends Component {
                         <div className="full">
                             <div className="col-md-11 col-sm-12">
 
-                                {<UploadBox uploadUrl="/uploads/images"/>}
+                                <UploadBox
+                                    uploadUrl="/api/upload"
+                                    getFiles={this.getFiles}
+                                    />
 
                             </div>
                         </div>
