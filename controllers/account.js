@@ -23,11 +23,6 @@ Account.prototype.checkIfUserExist = (req,res) => {
 
 };
 
-Account.prototype.createAccount = function(){
-
-};
-
-
 Account.prototype.getRegStatus = (req,res) => {
 
     if(req.isAuthenticated()){

@@ -9,6 +9,7 @@ var morgan = require('morgan');
 var flash = require('connect-flash');
 var session = require('express-session');
 var Account = require("./controllers/account");
+var Project = require("./controllers/projects");
 var passport = require("passport");
 var path = require("path");
 var multer = require('multer');
@@ -81,14 +82,9 @@ app.get('/register',auth.returnHome,(req,res) => {
 
 
 app.post('/api/verifytaken',account.checkIfUserExist);
-/*
-app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/', // redirect to the secure profile section
-        failureRedirect : '/authFail', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-}));
 
-*/
+app.post('api/startProject',auth.returnHome,Project.startProject);
+
 app.post('/login', passport.authenticate('local-login', {
         successRedirect : '/regSuccess', // redirect to the secure profile section
         failureRedirect : '/authFail', // redirect back to the signup page if there is an error
@@ -110,9 +106,6 @@ app.post('/register', passport.authenticate('local-signup', {
         failureFlash : true // allow flash messages
 }));
 
-app.get('/upload',(req,res)=>{
-    res.render('fileUploadTest.ejs')
-})
 app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');

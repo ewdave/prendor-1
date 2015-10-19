@@ -4,24 +4,26 @@
 var mongoose = require('mongoose');
 
 var SkillSchema = require("./../skillModel").SkillSchema;
-var FileSchema = require('./../fileModel').FileSchema;
+var LocationSchema = require("./../locationModel").LocationSchema;
 var ProjectSchema = new mongoose.Schema({
 
     title:String,
-    location:[{country:String,state:String}],
+    location:[LocationSchema],
     pricePDur:Number,
     pricePHr:Number,
-    duration:{wk:Number,days:Number},
-    files:[FileSchema],
+    duration:{mnths:Number,wks:Number,days:Number},
+    files:[String],
     skills:[SkillSchema],
     description:String,
-    milestone:Schema.ObjectId
+    language:String,
+    postedBy:String
 
 });
 
 /**
  *     Statics
  * find project by ID
+ *
  *
  * */
 
