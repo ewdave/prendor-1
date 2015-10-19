@@ -16,7 +16,7 @@ module.exports = {
          * description *
          *
          * */
-        var postedBy = req.user.email;
+        var postedBy = req.user.user_email_address;
         var title = req.body.title;
         var language = req.body.lang;
         var priceDur = req.body.priceDur;
@@ -35,19 +35,23 @@ module.exports = {
         project.duration = duration;
         project.files = files;
         var pSkills = [];
-        skills.map((content)=>{
-            var skill = new Skill();
-            skill.area = content.main_name;
-            skill.field = content.subItem;
-            pSkills.push(skill);
-        });
+        if(skills.length > 0){
+            skills.map((content)=>{
+                var skill = new Skill();
+                skill.area = content.main_name;
+                skill.field = content.subItem;
+                pSkills.push(skill);
+            });
+        }
         var pLocation = [];
-        locations.map((content)=>{
-            var location = new Location();
-            loc.country = content.country;
-            loc.state = content.state;
-            pLocation.push(loc);
-        });
+        if(locations.length > 0){
+            locations.map((content)=>{
+                var location = new Location();
+                loc.country = content.country;
+                loc.state = content.state;
+                pLocation.push(loc);
+            });
+        }
         project.skills = pSkills;
         project.location = pLocation;
         project.postedBy = postedBy;

@@ -18,7 +18,7 @@ var ProjectSchema = new mongoose.Schema({
     language:String,
     postedBy:String
 
-});
+},{collection:'projectList'});
 
 /**
  *     Statics

@@ -7,6 +7,7 @@ var ReactQuill = require('react-quill');
 require('./../../../../../../node_modules/react-quill/node_modules/quill/dist/quill.snow.css');
 import GeminiScrollbar from 'react-gemini-scrollbar';
 import UploadBox from './../../../Reusable/FileUpload/fileUploadBox';
+import axios from 'axios';
 
 import SkillSelection from './../../../Reusable/Accordion/skillSection';
 export default class ProjectStartNew extends Component {
@@ -15,7 +16,8 @@ export default class ProjectStartNew extends Component {
         this.state = {skills: [],
             dateTime: {mnths: 0, wks: 0, days: 0},
             desc: "Clear To Enter Description",
-            urls:[]
+            urls:[],
+            location:[]
         }
 
     }
@@ -24,11 +26,11 @@ export default class ProjectStartNew extends Component {
         this.setState({urls:files})
     }
 
-    getInputs = () => {
+    submitProject = () => {
         const dateTime = this.state.dateTime;
         const desc = this.state.desc;
         const title = React.findDOMNode(this.refs.title).value;
-        const milestone = React.findDOMNode(this.refs.milestone).value;
+        const lang = React.findDOMNode(this.refs.lang).value;
         /*
          use if only weeks n days is needed
          const weeks = React.findDOMNode(this.refs.weeks).value;
@@ -38,20 +40,50 @@ export default class ProjectStartNew extends Component {
         const priceHr = React.findDOMNode(this.refs.priceHr).value;
         const skills = this.state.skills;
         const urls = this.state.urls;
+        const location = [];
 
+        /**
+         var title = req.body.title; *
+         var language = req.body.lang; *
+         var priceDur = req.body.priceDur; *
+         var priceHr = req.body.priceHr; *
+         var desc = req.body.desc; *
+         var duration = req.body.dateTime; *
+         var files = req.body.urls; *
+         var skills = req.body.skills; *
+         var locations = req.body.location; *
+         *
+         * */
 
         console.log({
             title: title,
-            milestone: milestone,
-            month: dateTime.mnths,
-            weeks: dateTime.wks,
-            days: dateTime.days,
+            lang: lang,
+            dateTime: dateTime,
             priceDur: priceDur,
             priceHr: priceHr,
             skills: skills,
             desc: desc,
-            urls:urls
+            urls:urls,
+            location:location
+        });
+
+        axios.post('api/startProject', {
+            title: title,
+            lang: lang,
+            dateTime: dateTime,
+            priceDur: priceDur,
+            priceHr: priceHr,
+            skills: skills,
+            desc: desc,
+            urls:urls,
+            location:location
         })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (response) {
+                console.log(response);
+            });
     }
 
     getSkill = (array) =>{
@@ -165,8 +197,8 @@ export default class ProjectStartNew extends Component {
                             <div className="col-md-10">
 
                                 <div className="Milestone">
-                                    <span className="CheckBox"></span><span>Milestone</span><span>
-                                    <input type="text" placeholder="$300,000.00" ref="milestone"/></span>
+                                    <span className="CheckBox"></span><span>Language</span><span>
+                                    <input type="text" placeholder="Enter Language" ref="lang"/></span>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +241,7 @@ export default class ProjectStartNew extends Component {
                             <div className="col-md-6"></div>
                             <div className="col-md-6">
                                 <p className="post-project">
-                                    <button className="Button" onClick={this.getInputs}>Post Project <i
+                                    <button className="Button" onClick={this.submitProject}>Post Project <i
                                         className="fa fa-pencil-square-o"></i></button>
                                 </p>
                             </div>

@@ -83,7 +83,7 @@ app.get('/register',auth.returnHome,(req,res) => {
 
 app.post('/api/verifytaken',account.checkIfUserExist);
 
-app.post('api/startProject',auth.returnHome,Project.startProject);
+app.post('/api/startProject',auth.allowAuth,Project.startProject);
 
 app.post('/login', passport.authenticate('local-login', {
         successRedirect : '/regSuccess', // redirect to the secure profile section
