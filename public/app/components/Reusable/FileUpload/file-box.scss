@@ -68,14 +68,17 @@
     display: inline-block;
     width: 99%;
     & .file-tile {
+
       display: inline-block;
       color: $our_black;
-      border-right:1px solid #FFFFFF;
+      border-right: 1px solid #FFFFFF;
       box-shadow: 1px 1px 0 1px #dddddd;
       float: left;
-      padding: 8px 18px;
-      margin: 3px 3px;
+      margin: 3px 2.5%;
       border-bottom-right-radius: 6px;
+      height: 30px;
+      padding: 5px 0 0 0;
+      width: 44%;
 
     }
   }
